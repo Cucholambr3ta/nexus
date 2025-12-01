@@ -23,7 +23,9 @@
     "react": "19.2.0",
     "react-dom": "19.2.0",
     "react-hook-form": "^7.67.0",
+    "react-tsparticles": "^2.12.2",
     "tailwind-merge": "^3.4.0",
+    "tsparticles-slim": "^2.12.0",
     "zod": "^4.1.13"
   },
   "devDependencies": {

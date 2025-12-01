@@ -11,12 +11,17 @@ import { cn } from "@/lib/utils"
 type Mode = 'software' | 'web' | 'agent'
 type AgentScope = 'enterprise' | 'personal'
 
-export function NexusTerminal() {
+interface NexusTerminalProps {
+  mode: Mode
+  setMode: (mode: Mode) => void
+}
+
+export function NexusTerminal({ mode, setMode }: NexusTerminalProps) {
   const t = useTranslations("Index")
   const [isFocused, setIsFocused] = React.useState(false)
   const [isHandover, setIsHandover] = React.useState(false)
   const [refinedIdea, setRefinedIdea] = React.useState<string | null>(null)
-  const [mode, setMode] = React.useState<Mode>('software')
+  // Local mode state removed, using props
   const [agentScope, setAgentScope] = React.useState<AgentScope>('enterprise')
   const scrollRef = React.useRef<HTMLDivElement>(null)
 

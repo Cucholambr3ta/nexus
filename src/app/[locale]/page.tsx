@@ -1,10 +1,22 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import { NexusTerminal } from "@/components/nexus-terminal";
+import { ParticlesBackground } from "@/components/ui/particles-background";
+
+type Mode = 'software' | 'web' | 'agent';
 
 export default function Home() {
+  const [mode, setMode] = useState<Mode>('software');
+
   return (
     // Contenedor Principal con fondo oscuro y centrado
     <main className="flex min-h-screen flex-col items-center justify-center p-6 relative overflow-hidden bg-zinc-950 selection:bg-zinc-800 selection:text-white">
+      
+      {/* Interactive Particles Background */}
+      <ParticlesBackground mode={mode} />
+
       {/* Fondo de Cuadrícula Sutil (Grid Pattern) */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-100 pointer-events-none" />
 
@@ -50,7 +62,7 @@ export default function Home() {
 
         {/* La Terminal Interactiva */}
         <div className="w-full mt-6">
-        <NexusTerminal />
+        <NexusTerminal mode={mode} setMode={setMode} />
         </div>
 
         {/* Footer simple */}
