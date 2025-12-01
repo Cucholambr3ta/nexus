@@ -67,7 +67,9 @@ export default function Home() {
         </div>
 
         {/* Services Section */}
-        <ServicesSection />
+        <div className="w-full mt-32">
+          <ServicesSection />
+        </div>
 
         {/* Footer simple */}
         <footer className="absolute bottom-4 text-xs text-zinc-600 font-mono">
