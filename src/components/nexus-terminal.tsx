@@ -14,15 +14,16 @@ type AgentScope = 'enterprise' | 'personal'
 interface NexusTerminalProps {
   mode: Mode
   setMode: (mode: Mode) => void
+  agentScope: AgentScope
+  setAgentScope: (scope: AgentScope) => void
 }
 
-export function NexusTerminal({ mode, setMode }: NexusTerminalProps) {
+export function NexusTerminal({ mode, setMode, agentScope, setAgentScope }: NexusTerminalProps) {
   const t = useTranslations("Index")
   const [isFocused, setIsFocused] = React.useState(false)
   const [isHandover, setIsHandover] = React.useState(false)
   const [refinedIdea, setRefinedIdea] = React.useState<string | null>(null)
-  // Local mode state removed, using props
-  const [agentScope, setAgentScope] = React.useState<AgentScope>('enterprise')
+  // Local mode and agentScope state removed, using props
   const scrollRef = React.useRef<HTMLDivElement>(null)
 
   const [input, setInput] = React.useState('')
