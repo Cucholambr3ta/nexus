@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { NexusTerminal } from "@/components/nexus-terminal";
 import { ParticlesBackground } from "@/components/ui/particles-background";
+import { ServicesSection } from "@/components/services-section";
 
 type Mode = 'software' | 'web' | 'agent';
 
@@ -62,8 +63,11 @@ export default function Home() {
 
         {/* La Terminal Interactiva */}
         <div className="w-full mt-6">
-        <NexusTerminal mode={mode} setMode={setMode} />
+          <NexusTerminal mode={mode} setMode={setMode} />
         </div>
+
+        {/* Services Section */}
+        <ServicesSection />
 
         {/* Footer simple */}
         <footer className="absolute bottom-4 text-xs text-zinc-600 font-mono">
