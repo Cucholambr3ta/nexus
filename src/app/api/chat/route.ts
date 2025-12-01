@@ -1,4 +1,4 @@
-import { openai } from '@ai-sdk/openai';
+import { google } from '@ai-sdk/google';
 import { streamText } from 'ai';
 
 // Allow streaming responses up to 30 seconds
@@ -55,10 +55,10 @@ PROTOCOL:
   }
 
   const result = await streamText({
-    model: openai('gpt-4-turbo'),
+    model: google('gemini-1.5-pro-latest'),
     system: systemPrompt,
     messages,
   });
 
-  return result.toDataStreamResponse();
+  return result.toTextStreamResponse();
 }
