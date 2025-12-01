@@ -32,8 +32,10 @@ export function NexusTerminal() {
     transport,
     onFinish: ({ message }) => {
       // Gatekeeper Logic: Check for [REQ_COMPLETE]
-      if (message.content && typeof message.content === 'string' && message.content.includes("[REQ_COMPLETE]")) {
-        const parts = message.content.split("[REQ_COMPLETE]")
+      // Cast to any because UIMessage type definition in ai v5 seems to be missing 'content' property in some versions or is a union
+      const content = (message as any).content
+      if (content && typeof content === 'string' && content.includes("[REQ_COMPLETE]")) {
+        const parts = content.split("[REQ_COMPLETE]")
         const finalIdea = parts[1]?.trim()
         if (finalIdea) {
           setRefinedIdea(finalIdea)
