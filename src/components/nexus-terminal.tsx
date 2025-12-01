@@ -3,6 +3,7 @@
 import * as React from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { useChat } from "@ai-sdk/react"
+import { DefaultChatTransport } from "ai"
 import { Loader2, Terminal, Send, CheckCircle2, Cpu, Layout, Bot, Briefcase, Heart } from "lucide-react"
 import { useTranslations } from "next-intl"
 import { cn } from "@/lib/utils"
@@ -19,12 +20,19 @@ export function NexusTerminal() {
   const [agentScope, setAgentScope] = React.useState<AgentScope>('enterprise')
   const scrollRef = React.useRef<HTMLDivElement>(null)
 
-  const { messages, input, handleInputChange, handleSubmit, isLoading, stop } = useChat({
+  const [input, setInput] = React.useState('')
+  
+  // Memoize transport to prevent recreation on every render
+  const transport = React.useMemo(() => new DefaultChatTransport({
     api: '/api/chat',
-    body: { mode, agentScope },
-    onFinish: (message) => {
+    body: () => ({ mode, agentScope })
+  }), [mode, agentScope])
+
+  const { messages, sendMessage, status, stop } = useChat({
+    transport,
+    onFinish: ({ message }) => {
       // Gatekeeper Logic: Check for [REQ_COMPLETE]
-      if (message.content.includes("[REQ_COMPLETE]")) {
+      if (message.content && typeof message.content === 'string' && message.content.includes("[REQ_COMPLETE]")) {
         const parts = message.content.split("[REQ_COMPLETE]")
         const finalIdea = parts[1]?.trim()
         if (finalIdea) {
@@ -36,6 +44,20 @@ export function NexusTerminal() {
       }
     }
   })
+
+  const isLoading = status === 'submitted' || status === 'streaming'
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setInput(e.target.value)
+  }
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    if (!input.trim()) return
+    // sendMessage expects a message object or text
+    await sendMessage({ text: input })
+    setInput('')
+  }
 
   // Auto-scroll logs
   React.useEffect(() => {
