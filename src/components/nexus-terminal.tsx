@@ -261,8 +261,9 @@ export function NexusTerminal() {
               >
                 {messages.map((m) => {
                   const isSystem = m.role !== 'user'
-                  const rawContent = m.content || ""
-                  const content = rawContent.split("[REQ_COMPLETE]")[0] || ""
+                  // Cast to any because UIMessage type definition in ai v5 seems to be missing 'content' property
+                  const rawContent = (m as any).content || ""
+                  const content = typeof rawContent === 'string' ? rawContent.split("[REQ_COMPLETE]")[0] || "" : ""
                   
                   if (!content.trim()) return null
 
