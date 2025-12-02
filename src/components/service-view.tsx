@@ -16,9 +16,10 @@ interface ServiceViewProps {
   mode: string;
   scope: string;
   image: string;
+  onBack: () => void;
 }
 
-export function ServiceView({ content, mode, scope, image }: ServiceViewProps) {
+export function ServiceView({ content, mode, scope, image, onBack }: ServiceViewProps) {
   const themeColors = {
     software: "indigo",
     web: "rose",
@@ -48,6 +49,17 @@ export function ServiceView({ content, mode, scope, image }: ServiceViewProps) {
       <div className="fixed inset-0 bg-[linear-gradient(to_right,rgba(128,128,128,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(128,128,128,0.05)_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none z-0" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-24">
+        {/* Back Button */}
+        <motion.button
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          onClick={onBack}
+          className="mb-8 flex items-center gap-2 text-zinc-500 hover:text-white transition-colors group"
+        >
+          <ArrowRight className="w-4 h-4 rotate-180 group-hover:-translate-x-1 transition-transform" />
+          Back to Discovery
+        </motion.button>
+
         {/* HERO SECTION */}
         <motion.div
           initial="hidden"

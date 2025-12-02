@@ -13,6 +13,8 @@ import { ContextInfoPanel } from "@/components/context-info-panel";
 import { ProjectRequestModal } from "@/components/project-request-modal";
 import { DynamicDescription } from "@/components/dynamic-description";
 import { Plus } from "lucide-react";
+import { ServiceView } from "@/components/service-view";
+import { SERVICES_DATA, ServiceMode } from "@/lib/services-data";
 
 type Mode = 'discovery' | 'software' | 'web' | 'agent';
 
@@ -29,6 +31,23 @@ function HomeContent() {
   const [mode, setMode] = useState<Mode>('discovery');
   const { scope } = useScope();
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  // Render Service View if mode is a service
+  if (mode !== 'discovery') {
+    const serviceData = SERVICES_DATA[mode as ServiceMode];
+    if (serviceData) {
+      const content = scope === 'enterprise' ? serviceData.enterprise : serviceData.personal;
+      return (
+        <ServiceView 
+          mode={mode}
+          scope={scope}
+          content={content}
+          image={serviceData.image}
+          onBack={() => setMode('discovery')}
+        />
+      );
+    }
+  }
 
   return (
     <>
@@ -95,7 +114,7 @@ function HomeContent() {
 
         {/* Services Section */}
         <div className="w-full mt-32">
-          <ServicesSection />
+          <ServicesSection onSelect={(m) => setMode(m)} />
         </div>
 
         {/* Footer */}

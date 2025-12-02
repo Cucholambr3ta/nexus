@@ -1,12 +1,15 @@
-"use client";
-
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Cpu, Layout, Bot } from "lucide-react";
+import { Cpu, Layout, Bot, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
+import { ServiceMode } from "@/lib/services-data";
 
-export function ServicesSection() {
+interface ServicesSectionProps {
+  onSelect?: (mode: ServiceMode) => void;
+}
+
+export function ServicesSection({ onSelect }: ServicesSectionProps) {
   const t = useTranslations("Index");
   const [selectedId, setSelectedId] = useState<string | null>(null);
 
@@ -144,7 +147,7 @@ export function ServicesSection() {
                       <p className="text-muted-foreground text-sm leading-relaxed mb-4">
                         {service.description}
                       </p>
-                      <div className="flex flex-wrap gap-2">
+                      <div className="flex flex-wrap gap-2 mb-4">
                         {service.tags.map((tag) => (
                           <span
                             key={tag}
@@ -154,6 +157,24 @@ export function ServicesSection() {
                           </span>
                         ))}
                       </div>
+                      
+                      {/* View Details Button */}
+                      {onSelect && (
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            onSelect(service.id as ServiceMode);
+                          }}
+                          className={cn(
+                            "w-full flex items-center justify-center gap-2 py-2 rounded-lg text-sm font-medium transition-colors",
+                            service.theme.bg,
+                            service.theme.text,
+                            "hover:opacity-80"
+                          )}
+                        >
+                          View Details <ArrowRight className="w-4 h-4" />
+                        </button>
+                      )}
                     </motion.div>
                   )}
                 </AnimatePresence>
