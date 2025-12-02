@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Cpu, Layout, Bot, ArrowRight } from "lucide-react";
+import { Cpu, Layout, Bot, ArrowRight, Sparkles } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
 import { ServiceMode } from "@/lib/services-data";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 interface ServicesSectionProps {
   onSelect?: (mode: ServiceMode) => void;
@@ -11,7 +13,7 @@ interface ServicesSectionProps {
 
 export function ServicesSection({ onSelect }: ServicesSectionProps) {
   const t = useTranslations("Index");
-  const [selectedId, setSelectedId] = useState<string | null>(null);
+  const [hoveredId, setHoveredId] = useState<string | null>(null);
 
   const services = [
     {
@@ -21,13 +23,9 @@ export function ServicesSection({ onSelect }: ServicesSectionProps) {
       description: t("services.software.description"),
       tags: ["Node.js", "Python", "Kubernetes"],
       icon: Cpu,
-      color: "indigo",
-      theme: {
-        border: "border-indigo-500/50",
-        bg: "bg-indigo-500/10",
-        text: "text-indigo-400",
-        ring: "ring-indigo-500/50",
-      },
+      colSpan: "md:col-span-2",
+      gradient: "from-indigo-500/20 via-purple-500/20 to-blue-500/20",
+      border: "hover:border-indigo-500/50",
     },
     {
       id: "web",
@@ -36,13 +34,9 @@ export function ServicesSection({ onSelect }: ServicesSectionProps) {
       description: t("services.web.description"),
       tags: ["Next.js 14", "Tailwind", "Framer Motion"],
       icon: Layout,
-      color: "rose",
-      theme: {
-        border: "border-rose-500/50",
-        bg: "bg-rose-500/10",
-        text: "text-rose-400",
-        ring: "ring-rose-500/50",
-      },
+      colSpan: "md:col-span-1",
+      gradient: "from-rose-500/20 via-orange-500/20 to-red-500/20",
+      border: "hover:border-rose-500/50",
     },
     {
       id: "agent",
@@ -51,134 +45,103 @@ export function ServicesSection({ onSelect }: ServicesSectionProps) {
       description: t("services.agent.description"),
       tags: ["OpenAI", "n8n", "RAG"],
       icon: Bot,
-      color: "emerald",
-      theme: {
-        border: "border-emerald-500/50",
-        bg: "bg-emerald-500/10",
-        text: "text-emerald-400",
-        ring: "ring-emerald-500/50",
-      },
+      colSpan: "md:col-span-3",
+      gradient: "from-emerald-500/20 via-teal-500/20 to-green-500/20",
+      border: "hover:border-emerald-500/50",
     },
   ];
 
   return (
-    <section className="w-full max-w-6xl mx-auto px-4 py-24 relative z-10">
+    <section className="w-full max-w-7xl mx-auto px-4 py-24 relative z-10">
       {/* Header */}
-      <div className="text-center mb-16 space-y-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-foreground tracking-tight">
-          {t("team.title")}
-        </h2>
-        <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
-          {t("team.subtitle")}
-        </p>
+      <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+        <div className="space-y-4 max-w-2xl">
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tighter">
+            {t("team.title")}
+          </h2>
+          <p className="text-muted-foreground text-lg leading-relaxed">
+            {t("team.subtitle")}
+          </p>
+        </div>
+        <div className="hidden md:block pb-2">
+          <span className="text-xs font-mono text-muted-foreground uppercase tracking-widest">
+            Capabilities v2.0
+          </span>
+        </div>
       </div>
 
-      {/* Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {/* Bento Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[minmax(300px,auto)]">
         {services.map((service) => {
-          const isSelected = selectedId === service.id;
           const Icon = service.icon;
 
           return (
             <motion.div
               key={service.id}
-              layout
-              onClick={() => setSelectedId(isSelected ? null : service.id)}
-              className={cn(
-                "relative overflow-hidden rounded-xl border bg-card/40 backdrop-blur-sm cursor-pointer transition-colors duration-300",
-                isSelected
-                  ? service.theme.border
-                  : "border-border hover:border-primary/50",
-              )}
+              className={cn("group relative", service.colSpan)}
+              onHoverStart={() => setHoveredId(service.id)}
+              onHoverEnd={() => setHoveredId(null)}
+              whileHover={{ scale: 1.01 }}
+              transition={{ duration: 0.2 }}
             >
-              <div className="p-6 flex flex-col h-full">
-                {/* Icon & Header */}
-                <motion.div
-                  layout="position"
-                  className="flex items-start justify-between mb-4"
-                >
-                  <div
-                    className={cn(
-                      "p-3 rounded-lg",
-                      service.theme.bg,
-                      service.theme.text,
-                    )}
-                  >
-                    <Icon className="w-6 h-6" />
+              <Card 
+                className={cn(
+                  "h-full overflow-hidden border-border/50 bg-card/50 backdrop-blur-sm transition-all duration-500",
+                  service.border,
+                  "hover:shadow-2xl hover:shadow-primary/5"
+                )}
+              >
+                {/* Dynamic Gradient Background */}
+                <div className={cn(
+                  "absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-100 transition-opacity duration-500",
+                  service.gradient
+                )} />
+
+                <CardHeader className="relative z-10">
+                  <div className="flex justify-between items-start mb-4">
+                    <div className="p-3 rounded-xl bg-background/50 border border-border/50 backdrop-blur-md">
+                      <Icon className="w-6 h-6 text-foreground" />
+                    </div>
+                    <ArrowRight className="w-5 h-5 text-muted-foreground opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-300" />
                   </div>
-                  {isSelected && (
-                    <motion.div
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      className={cn(
-                        "text-xs font-mono px-2 py-1 rounded-full border",
-                        service.theme.border,
-                        service.theme.text,
-                      )}
+                  <CardTitle className="text-2xl md:text-3xl mb-2">
+                    {service.title}
+                  </CardTitle>
+                  <CardDescription className="text-base font-medium text-primary/80">
+                    {service.subtitle}
+                  </CardDescription>
+                </CardHeader>
+
+                <CardContent className="relative z-10 space-y-6">
+                  <p className="text-muted-foreground leading-relaxed">
+                    {service.description}
+                  </p>
+                  
+                  <div className="flex flex-wrap gap-2">
+                    {service.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="text-xs font-medium px-2.5 py-1 rounded-md bg-background/50 border border-border/50 text-muted-foreground"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </CardContent>
+
+                <CardFooter className="relative z-10 pt-0 mt-auto">
+                  {onSelect && (
+                    <Button 
+                      variant="ghost" 
+                      className="w-full justify-between group/btn hover:bg-background/50"
+                      onClick={() => onSelect(service.id as ServiceMode)}
                     >
-                      ACTIVE
-                    </motion.div>
+                      <span className="font-medium">Explore Capabilities</span>
+                      <Sparkles className="w-4 h-4 opacity-50 group-hover/btn:opacity-100 transition-opacity" />
+                    </Button>
                   )}
-                </motion.div>
-
-                <motion.h3
-                  layout="position"
-                  className="text-xl font-bold text-card-foreground mb-1"
-                >
-                  {service.title}
-                </motion.h3>
-
-                <motion.p
-                  layout="position"
-                  className="text-sm text-muted-foreground font-medium"
-                >
-                  {service.subtitle}
-                </motion.p>
-
-                {/* Expanded Content */}
-                <AnimatePresence>
-                  {isSelected && (
-                    <motion.div
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: "auto" }}
-                      exit={{ opacity: 0, height: 0 }}
-                      className="mt-4 pt-4 border-t border-border/50"
-                    >
-                      <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-                        {service.description}
-                      </p>
-                      <div className="flex flex-wrap gap-2 mb-4">
-                        {service.tags.map((tag) => (
-                          <span
-                            key={tag}
-                            className="text-[10px] uppercase tracking-wider px-2 py-1 rounded bg-muted border border-border text-muted-foreground"
-                          >
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-                      
-                      {/* View Details Button */}
-                      {onSelect && (
-                        <button
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            onSelect(service.id as ServiceMode);
-                          }}
-                          className={cn(
-                            "w-full flex items-center justify-center gap-2 py-2 rounded-lg text-sm font-medium transition-colors",
-                            service.theme.bg,
-                            service.theme.text,
-                            "hover:opacity-80"
-                          )}
-                        >
-                          View Details <ArrowRight className="w-4 h-4" />
-                        </button>
-                      )}
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
+                </CardFooter>
+              </Card>
             </motion.div>
           );
         })}
