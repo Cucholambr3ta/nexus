@@ -1,0 +1,118 @@
+{
+  "Index": {
+    "hero": {
+      "title": "CuchoLambreta Nexus",
+      "subtitle": "The Global Digital Orchestration Council. Tell us your vision, we design the architecture."
+    },
+    "terminal": {
+      "placeholder": {
+        "discovery": "Describe your SaaS Platform or Complex System...",
+        "software": "Describe your SaaS Platform or Complex System...",
+        "web": "Describe your Corporate Site or Portfolio...",
+        "agent": "Describe the task you want to automate..."
+      },
+      "logs": {
+        "init": "Initializing Team Protocols...",
+        "analyzing": "The Council is analyzing...",
+        "handover": "Request Approved by The Council."
+      },
+      "modes": {
+        "discovery": "Discovery",
+        "software": "Software",
+        "web": "Web",
+        "agent": "Agent"
+      },
+      "scopes": {
+        "enterprise": "Enterprise",
+        "personal": "Personal"
+      }
+    },
+    "services": {
+      "software": {
+        "title": "Software Architecture",
+        "subtitle": "Robust Systems.",
+        "description": "Scalable and secure systems built by our senior engineers."
+      },
+      "web": {
+        "title": "Web Experience",
+        "subtitle": "Design that Converts.",
+        "description": "High-performance sites designed to convert."
+      },
+      "agent": {
+        "title": "AI Workforce",
+        "subtitle": "Autonomous Agents 24/7.",
+        "description": "Autonomous agents that work while we sleep."
+      }
+    },
+    "team": {
+      "title": "The Council",
+      "subtitle": "A collective of experts united by excellence."
+    },
+    "cta": {
+      "bookCall": "Book Strategy",
+      "start": "Start Protocol"
+    }
+  },
+  "ServicesPage": {
+    "back": "Back to Nexus",
+    "diagnosis": "The Diagnosis",
+    "diagnosisSubtitle": "Why the traditional approach is failing you.",
+    "painPoint": "Pain Point",
+    "solution": "Our Solution",
+    "oldWay": "Traditional Agencies",
+    "newWay": "Cucho Lambreta",
+    "roadmap": "Execution Roadmap",
+    "deliverables": "Tangible Deliverables",
+    "guarantee": "100% Risk-Free Guarantee",
+    "faq": "Frequently Asked Questions",
+    "ready": "Ready to Start?",
+    "initProtocol": "Initialize Protocol"
+  },
+  "DynamicDescription": {
+    "discovery": {
+      "personal": "Let our AI analyze your personal needs.",
+      "enterprise": "Our AI will assess your corporate requirements."
+    },
+    "software": {
+      "personal": "Build custom software for your ideas.",
+      "enterprise": "Develop scalable, enterprise-grade architectures."
+    },
+    "web": {
+      "personal": "Create a stunning personal portfolio.",
+      "enterprise": "Design a high-converting corporate portal."
+    },
+    "agent": {
+      "personal": "Deploy personal AI agents for daily tasks.",
+      "enterprise": "Integrate advanced AI workforce automation."
+    }
+  },
+  "ProjectRequestModal": {
+    "title": "Start a Project",
+    "subtitle": "Tell us about your vision.",
+    "successTitle": "Request Received",
+    "successMessage": "We'll be in touch shortly to discuss the details.",
+    "fields": {
+      "name": "Name",
+      "email": "Email",
+      "company": "Company (Optional)",
+      "type": "Type",
+      "budget": "Budget",
+      "description": "Project Description"
+    },
+    "placeholders": {
+      "name": "John Doe",
+      "email": "john@example.com",
+      "company": "Acme Inc.",
+      "budget": "e.g. $5k - $10k",
+      "description": "Describe your project goals and requirements..."
+    },
+    "options": {
+      "web": "Web Development",
+      "software": "Software Engineering",
+      "ai": "AI Integration",
+      "consulting": "Consulting"
+    },
+    "submit": "Submit Request",
+    "sending": "Sending..."
+  }
+}

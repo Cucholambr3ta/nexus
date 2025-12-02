@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { NexusTerminal } from "@/components/nexus-terminal";
 import { ParticlesBackground } from "@/components/ui/particles-background";
@@ -31,27 +31,22 @@ function HomeContent() {
   const [mode, setMode] = useState<Mode>('discovery');
   const { scope } = useScope();
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const serviceViewRef = useRef<HTMLDivElement>(null);
 
-  // Render Service View if mode is a service
-  if (mode !== 'discovery') {
-    const serviceData = SERVICES_DATA[mode as ServiceMode];
-    if (serviceData) {
-      const content = scope === 'enterprise' ? serviceData.enterprise : serviceData.personal;
-      return (
-        <ServiceView 
-          mode={mode}
-          scope={scope}
-          content={content}
-          image={serviceData.image}
-          onBack={() => setMode('discovery')}
-        />
-      );
+  // Scroll to Service View when mode changes to a service
+  useEffect(() => {
+    if (mode !== 'discovery' && serviceViewRef.current) {
+      setTimeout(() => {
+        serviceViewRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 100);
     }
-  }
+  }, [mode]);
+
+  const serviceData = mode !== 'discovery' ? SERVICES_DATA[mode as ServiceMode] : null;
 
   return (
     <>
-    <main className="flex min-h-screen flex-col items-center justify-center p-6 relative overflow-hidden selection:bg-primary/20 selection:text-primary">
+    <main className="flex min-h-screen flex-col items-center justify-start p-6 relative overflow-x-hidden selection:bg-primary/20 selection:text-primary">
       
       {/* Top Right Controls */}
       <div className="absolute top-6 right-6 z-50 flex items-center gap-2">
@@ -71,10 +66,10 @@ function HomeContent() {
       <ParticlesBackground mode={mode} agentScope={scope} />
 
       {/* Subtle Grid Background */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(128,128,128,0.1)_1px,transparent_1px),linear-gradient(to_bottom,rgba(128,128,128,0.1)_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(128,128,128,0.1)_1px,transparent_1px),linear-gradient(to_bottom,rgba(128,128,128,0.1)_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none fixed" />
 
       {/* Central Content */}
-      <div className="relative z-10 flex flex-col items-center gap-8 max-w-4xl w-full py-12">
+      <div className="relative z-10 flex flex-col items-center gap-8 max-w-4xl w-full py-12 min-h-screen justify-center">
 
         {/* Header with Avatar */}
         <div className="flex flex-col md:flex-row items-center gap-6 text-center md:text-left">
@@ -122,6 +117,19 @@ function HomeContent() {
           © {new Date().getFullYear()} CuchoLambreta Corp. Neural Systems.
         </footer>
       </div>
+
+      {/* Inline Service View */}
+      {serviceData && (
+        <div ref={serviceViewRef} className="w-full relative z-20">
+          <ServiceView 
+            mode={mode as ServiceMode}
+            scope={scope}
+            content={scope === 'enterprise' ? serviceData.enterprise : serviceData.personal}
+            image={serviceData.image}
+            onBack={() => setMode('discovery')}
+          />
+        </div>
+      )}
     </main>
     <ProjectRequestModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </>
