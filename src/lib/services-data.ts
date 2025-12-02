@@ -4,7 +4,6 @@ export interface ServiceContent {
     subtitle: string;
     description: string;
     cta: string;
-    image: string;
     gradient: string;
   };
   diagnosis: {
@@ -22,446 +21,446 @@ export interface ServiceContent {
   faq: { question: string; answer: string }[];
 }
 
+export interface ServiceGroup {
+  image: string;
+  enterprise: ServiceContent;
+  personal: ServiceContent;
+}
+
 export type ServiceMode = 'software' | 'web' | 'agent';
 
-export const SERVICES_DATA: Record<
-  ServiceMode,
-  { enterprise: ServiceContent; personal: ServiceContent }
-> = {
+export const SERVICES_DATA: Record<ServiceMode, ServiceGroup> = {
   software: {
+    image: "/service-software.png",
     enterprise: {
       hero: {
-        title: "Enterprise-Grade Software Architecture",
-        subtitle: "Mission-Critical Systems for High-Scale Operations",
+        title: "Ingeniería de Grado Militar",
+        subtitle: "Sistemas de Misión Crítica para Operaciones de Alta Escala",
         description:
-          "We engineer robust, scalable, and secure software ecosystems designed to handle millions of transactions. Our focus is on modernizing legacy infrastructure and ensuring ISO 27001 compliance while maintaining 99.99% availability.",
-        cta: "Schedule Architecture Review",
-        image: "/service-software.png",
+          "Diseñamos ecosistemas de software robustos, escalables y seguros. Modernizamos infraestructura heredada garantizando cumplimiento ISO 27001 y disponibilidad del 99.99%.",
+        cta: "Agendar Revisión de Arquitectura",
         gradient: "from-blue-500 to-cyan-500",
       },
       diagnosis: {
-        title: "Is Your Infrastructure Holding You Back?",
+        title: "¿Tu Infraestructura te está Frenando?",
         problems: [
-          "Legacy systems creating technical debt and slowing innovation.",
-          "Security vulnerabilities risking ISO 27001 non-compliance.",
-          "Inability to scale horizontally during peak load events.",
-          "Fragmented data silos preventing unified analytics.",
+          "Sistemas heredados generando deuda técnica.",
+          "Vulnerabilidades de seguridad y riesgo de cumplimiento.",
+          "Incapacidad de escalar horizontalmente en picos de carga.",
+          "Silos de datos fragmentados que impiden analítica unificada.",
         ],
-        painPoint: "Technical Debt & Risk",
-        solution: "Modernization & Compliance",
+        painPoint: "Deuda Técnica",
+        solution: "Microservicios Inmutables",
         comparison: [
-          { them: "Patchwork Fixes", us: "Holistic Architecture" },
-          { them: "Security Afterthought", us: "Security First" },
-          { them: "Manual Scaling", us: "Auto-Scaling" },
+          { them: "Parches Temporales", us: "Arquitectura Holística" },
+          { them: "Seguridad Reactiva", us: "Security First" },
+          { them: "Escalado Manual", us: "Auto-Scaling Nativo" },
         ],
       },
       roadmap: {
         steps: [
           {
-            title: "Audit & Discovery",
+            title: "Auditoría y Descubrimiento",
             description:
-              "Deep-dive analysis of current architecture, security posture, and code quality.",
+              "Análisis profundo de arquitectura actual, postura de seguridad y calidad de código.",
           },
           {
-            title: "Strategic Migration Plan",
+            title: "Plan de Migración Estratégico",
             description:
-              "Phased roadmap to transition from monoliths to microservices without downtime.",
+              "Roadmap por fases para transicionar de monolitos a microservicios sin downtime.",
           },
           {
-            title: "Core Implementation",
+            title: "Implementación Core",
             description:
-              "Development of high-availability backend services and secure API gateways.",
+              "Desarrollo de servicios backend de alta disponibilidad y API gateways seguros.",
           },
           {
-            title: "Optimization & Handoff",
+            title: "Optimización y Entrega",
             description:
-              "Performance tuning, load testing, and comprehensive documentation for internal teams.",
+              "Tuning de rendimiento, pruebas de carga y documentación exhaustiva para equipos internos.",
           },
         ],
       },
       deliverables: [
-        "Microservices Architecture Blueprint",
-        "ISO 27001 Compliance Report",
-        "High-Availability Cluster Setup",
-        "Legacy Migration Strategy",
-        "Automated CI/CD Pipelines",
+        "Blueprint de Microservicios",
+        "Reporte de Cumplimiento ISO 27001",
+        "Cluster de Alta Disponibilidad",
+        "Estrategia de Migración",
+        "Pipelines CI/CD Automatizados",
       ],
       guarantee:
-        "We guarantee zero data loss during migration and a minimum 20% improvement in system throughput, or we continue optimization at no cost.",
+        "Garantizamos cero pérdida de datos durante la migración y una mejora mínima del 20% en throughput, o continuamos optimizando sin costo.",
       faq: [
         {
-          question: "How do you handle legacy data migration?",
+          question: "¿Cómo manejan la migración de datos legacy?",
           answer:
-            "We use a strangler fig pattern to incrementally migrate functionality and data, ensuring zero downtime and data integrity verification at every step.",
+            "Usamos el patrón 'Strangler Fig' para migrar funcionalidad incrementalmente, asegurando cero downtime y verificación de integridad de datos paso a paso.",
         },
         {
-          question: "Can you work with our internal security team?",
+          question: "¿Pueden trabajar con nuestro equipo de seguridad?",
           answer:
-            "Absolutely. We integrate directly with your SecOps processes to ensure all code meets your specific compliance and security standards.",
+            "Absolutamente. Nos integramos con tus procesos de SecOps para asegurar que todo el código cumpla con tus estándares específicos.",
         },
       ],
     },
     personal: {
       hero: {
-        title: "Rapid MVP Development",
-        subtitle: "From Concept to Market in Weeks, Not Months",
+        title: "Materializa tu Startup",
+        subtitle: "De Concepto a Mercado en Semanas, No Meses",
         description:
-          "Launch your startup idea with a scalable, cost-efficient MVP. We prioritize speed to market and core functionality, giving you the traction you need to secure funding and grow.",
-        cta: "Start Your Build",
-        image: "/service-software.png",
+          "Lanza tu idea con un MVP escalable y costo-eficiente. Priorizamos velocidad de mercado y funcionalidad core para que logres tracción y financiamiento.",
+        cta: "Iniciar Construcción",
         gradient: "from-blue-500 to-cyan-500",
       },
       diagnosis: {
-        title: "Struggling to Launch?",
+        title: "¿Luchando por Lanzar?",
         problems: [
-          "Overwhelmed by technical complexity and choice paralysis.",
-          "Fear of building features that users don't want.",
-          "Limited budget requiring strict cost efficiency.",
-          "Slow development cycles missing market windows.",
+          "Abrumado por complejidad técnica y parálisis por análisis.",
+          "Miedo a construir features que los usuarios no quieren.",
+          "Presupuesto limitado requiriendo eficiencia extrema.",
+          "Ciclos de desarrollo lentos perdiendo ventanas de mercado.",
         ],
-        painPoint: "Complexity & Cost",
-        solution: "Lean MVP Strategy",
+        painPoint: "Agencias lentas",
+        solution: "MVP en semanas",
         comparison: [
-          { them: "Over-Engineering", us: "Core Value Focus" },
-          { them: "Slow Development", us: "Rapid Iteration" },
-          { them: "High Initial Cost", us: "Cost-Effective" },
+          { them: "Sobre-Ingeniería", us: "Foco en Valor Core" },
+          { them: "Desarrollo Lento", us: "Iteración Rápida" },
+          { them: "Costo Inicial Alto", us: "Costo-Efectivo" },
         ],
       },
       roadmap: {
         steps: [
           {
-            title: "Concept Validation",
+            title: "Validación de Concepto",
             description:
-              "Refining your idea into a lean technical specification focused on core value.",
+              "Refinamiento de tu idea en una especificación técnica lean enfocada en valor.",
           },
           {
-            title: "Rapid Prototyping",
+            title: "Prototipado Rápido",
             description:
-              "Building a functional prototype to test user flows and gather initial feedback.",
+              "Construcción de prototipo funcional para testear flujos de usuario y feedback inicial.",
           },
           {
-            title: "MVP Development",
+            title: "Desarrollo de MVP",
             description:
-              "Agile development of the production-ready MVP using scalable cloud-native tech.",
+              "Desarrollo ágil del MVP listo para producción usando tecnología cloud-native.",
           },
           {
-            title: "Launch & Iterate",
+            title: "Lanzamiento e Iteración",
             description:
-              "Deployment to production and setup of analytics to measure user behavior.",
+              "Despliegue a producción y configuración de analítica para medir comportamiento.",
           },
         ],
       },
       deliverables: [
-        "Fully Functional MVP",
-        "Scalable Cloud Architecture",
-        "Mobile-Responsive UI",
-        "Admin Dashboard",
-        "Analytics Integration",
+        "MVP Totalmente Funcional",
+        "Arquitectura Cloud Escalable",
+        "UI Mobile-Responsive",
+        "Dashboard de Administración",
+        "Integración de Analítica",
       ],
       guarantee:
-        "We deliver a working MVP within the agreed timeline and budget. If we miss the deadline, we work for free until it's live.",
+        "Entregamos un MVP funcional en el tiempo y presupuesto acordado. Si fallamos, trabajamos gratis hasta que esté vivo.",
       faq: [
         {
-          question: "What tech stack do you use?",
+          question: "¿Qué stack tecnológico usan?",
           answer:
-            "We choose the best tool for the job, typically modern stacks like React, Node.js, and Supabase for rapid development and easy scalability.",
+            "Elegimos la mejor herramienta, típicamente stacks modernos como React, Node.js y Supabase para desarrollo rápido y escalabilidad.",
         },
         {
-          question: "Can I scale this later?",
+          question: "¿Puedo escalar esto después?",
           answer:
-            "Yes. We build with scale in mind, using modular code and cloud infrastructure that can grow with your user base.",
+            "Sí. Construimos pensando en escala, usando código modular e infraestructura cloud que crece con tu base de usuarios.",
         },
       ],
     },
   },
   web: {
+    image: "/service-web.png",
     enterprise: {
       hero: {
-        title: "Global Digital Experience Platforms",
-        subtitle: "Dominating Brand Presence at Scale",
+        title: "Identidad Corporativa Blindada",
+        subtitle: "Presencia de Marca Dominante a Escala Global",
         description:
-          "We build enterprise-grade web platforms that enforce brand authority and deliver lightning-fast experiences globally. Utilizing advanced design systems and edge-network CDNs, we ensure consistency and performance across all markets.",
-        cta: "Elevate Your Brand",
-        image: "/service-web.png",
+          "Construimos plataformas web de grado empresarial que imponen autoridad de marca y entregan experiencias ultra-rápidas globalmente. Usando design systems avanzados y CDNs edge-network.",
+        cta: "Elevar tu Marca",
         gradient: "from-purple-500 to-pink-500",
       },
       diagnosis: {
-        title: "Is Your Digital Presence Fragmented?",
+        title: "¿Tu Presencia Digital está Fragmentada?",
         problems: [
-          "Inconsistent brand representation across regional sites.",
-          "Slow page loads damaging SEO and user retention.",
-          "Difficulty managing content updates globally.",
-          "Lack of accessibility compliance (WCAG) exposing legal risk.",
+          "Representación de marca inconsistente en sitios regionales.",
+          "Cargas lentas dañando SEO y retención de usuarios.",
+          "Dificultad gestionando actualizaciones de contenido global.",
+          "Falta de cumplimiento de accesibilidad (WCAG) exponiendo riesgo legal.",
         ],
-        painPoint: "Brand Fragmentation",
-        solution: "Unified Design System",
+        painPoint: "Sitios lentos dañan la marca",
+        solution: "Design Systems Globales",
         comparison: [
-          { them: "Inconsistent UI", us: "Pixel-Perfect Consistency" },
-          { them: "Slow Performance", us: "Edge-Network Speed" },
-          { them: "Hard to Manage", us: "Headless CMS" },
+          { them: "UI Inconsistente", us: "Consistencia Pixel-Perfect" },
+          { them: "Performance Lenta", us: "Velocidad Edge-Network" },
+          { them: "Difícil de Gestionar", us: "Headless CMS" },
         ],
       },
       roadmap: {
         steps: [
           {
-            title: "Global Audit",
+            title: "Auditoría Global",
             description:
-              "Review of current web estate, performance metrics, and brand consistency.",
+              "Revisión del estado web actual, métricas de performance y consistencia de marca.",
           },
           {
-            title: "Design System Creation",
+            title: "Creación de Design System",
             description:
-              "Developing a unified component library to ensure brand integrity everywhere.",
+              "Desarrollo de librería de componentes unificada para asegurar integridad de marca.",
           },
           {
-            title: "Platform Engineering",
+            title: "Ingeniería de Plataforma",
             description:
-              "Building a headless CMS architecture with global CDN distribution.",
+              "Construcción de arquitectura Headless CMS con distribución CDN global.",
           },
           {
-            title: "Rollout & Training",
+            title: "Rollout y Entrenamiento",
             description:
-              "Phased launch of regional sites and training for content teams.",
+              "Lanzamiento por fases de sitios regionales y capacitación a equipos de contenido.",
           },
         ],
       },
       deliverables: [
-        "Global Design System",
-        "Headless CMS Integration",
-        "Global CDN Configuration",
-        "WCAG 2.1 AA Compliance",
-        "Advanced Analytics Dashboard",
+        "Design System Global",
+        "Integración Headless CMS",
+        "Configuración CDN Global",
+        "Cumplimiento WCAG 2.1 AA",
+        "Dashboard de Analítica Avanzada",
       ],
       guarantee:
-        "We guarantee a Google Lighthouse performance score of 90+ and full WCAG compliance, ensuring your brand leads the market.",
+        "Garantizamos un puntaje Google Lighthouse de 90+ y cumplimiento WCAG total, asegurando que tu marca lidere el mercado.",
       faq: [
         {
-          question: "How do you handle multi-language support?",
+          question: "¿Cómo manejan el soporte multi-idioma?",
           answer:
-            "We implement robust internationalization (i18n) frameworks deeply integrated with the CMS, allowing for seamless content localization.",
+            "Implementamos frameworks de internacionalización (i18n) robustos integrados profundamente con el CMS.",
         },
         {
-          question: "Will this integrate with our CRM?",
+          question: "¿Se integrará con nuestro CRM?",
           answer:
-            "Yes, we build custom connectors to sync user data and leads directly into Salesforce, HubSpot, or your preferred CRM.",
+            "Sí, construimos conectores a medida para sincronizar datos de usuarios y leads directamente a Salesforce, HubSpot, etc.",
         },
       ],
     },
     personal: {
       hero: {
-        title: "High-Impact Personal Branding",
-        subtitle: "Visual Identity That Commands Attention",
+        title: "Tu Portafolio, Tu Legado",
+        subtitle: "Identidad Visual que Comanda Atención",
         description:
-          "Stand out in a crowded market with a stunning, high-performance portfolio site. We focus on visual impact and storytelling to elevate your personal brand and convert visitors into opportunities.",
-        cta: "Build Your Brand",
-        image: "/service-web.png",
+          "Destaca en un mercado saturado con un sitio de portafolio impresionante y de alto rendimiento. Nos enfocamos en impacto visual y storytelling para elevar tu marca personal.",
+        cta: "Construir mi Marca",
         gradient: "from-purple-500 to-pink-500",
       },
       diagnosis: {
-        title: "Are You Invisible Online?",
+        title: "¿Eres Invisible Online?",
         problems: [
-          "Generic website templates that fail to impress.",
-          "Portfolio not effectively showcasing your best work.",
-          "Low conversion rates from site visitors.",
-          "Difficulty updating content without technical help.",
+          "Plantillas genéricas que no impresionan a nadie.",
+          "Portafolio que no muestra tu mejor trabajo efectivamente.",
+          "Bajas tasas de conversión de visitantes.",
+          "Dificultad para actualizar contenido sin ayuda técnica.",
         ],
-        painPoint: "Generic Online Presence",
-        solution: "Custom Brand Identity",
+        painPoint: "Ser invisible",
+        solution: "Impacto Visual Inmediato",
         comparison: [
-          { them: "Cookie-Cutter Templates", us: "Bespoke Design" },
-          { them: "Static Content", us: "Dynamic Storytelling" },
-          { them: "Low Conversion", us: "High Impact" },
+          { them: "Plantillas Genéricas", us: "Diseño A Medida" },
+          { them: "Contenido Estático", us: "Storytelling Dinámico" },
+          { them: "Bajo Impacto", us: "Conversión Alta" },
         ],
       },
       roadmap: {
         steps: [
           {
-            title: "Brand Discovery",
+            title: "Descubrimiento de Marca",
             description:
-              "Defining your unique value proposition and visual identity.",
+              "Definición de tu propuesta de valor única e identidad visual.",
           },
           {
-            title: "Visual Design",
+            title: "Diseño Visual",
             description:
-              "Creating high-fidelity mockups that capture your personality and professional edge.",
+              "Creación de mockups de alta fidelidad que capturan tu personalidad y profesionalismo.",
           },
           {
-            title: "Development",
+            title: "Desarrollo",
             description:
-              "Coding a pixel-perfect, responsive website with smooth animations.",
+              "Codificación de un sitio pixel-perfect, responsivo y con animaciones fluidas.",
           },
           {
-            title: "Content Strategy",
+            title: "Estrategia de Contenido",
             description:
-              "Optimizing your copy and project case studies for maximum impact.",
+              "Optimización de tu copy y casos de estudio para máximo impacto.",
           },
         ],
       },
       deliverables: [
-        "Custom Portfolio Website",
-        "Visual Identity Kit",
-        "CMS for Easy Updates",
-        "SEO Optimization",
-        "Social Media Integration",
+        "Sitio Web de Portafolio Custom",
+        "Kit de Identidad Visual",
+        "CMS para Actualizaciones Fáciles",
+        "Optimización SEO",
+        "Integración Redes Sociales",
       ],
       guarantee:
-        "You will love your new site. We offer unlimited design revisions during the design phase until you are 100% satisfied.",
+        "Amarás tu nuevo sitio. Ofrecemos revisiones de diseño ilimitadas hasta que estés 100% satisfecho.",
       faq: [
         {
-          question: "Do I need to know how to code?",
+          question: "¿Necesito saber programar?",
           answer:
-            "Not at all. We provide an easy-to-use content management system so you can update your text and images anytime.",
+            "Para nada. Proveemos un CMS fácil de usar para que actualices textos e imágenes cuando quieras.",
         },
         {
-          question: "How long does it take?",
+          question: "¿Cuánto tiempo toma?",
           answer:
-            "Typically, we can launch a high-impact personal site in 2-4 weeks, depending on the complexity and content readiness.",
+            "Típicamente lanzamos un sitio personal de alto impacto en 2-4 semanas.",
         },
       ],
     },
   },
   agent: {
+    image: "/service-agent.png",
     enterprise: {
       hero: {
-        title: "Enterprise AI Workforce",
-        subtitle: "Automating Operations for Massive ROI",
+        title: "Revolución de Productividad",
+        subtitle: "Automatizando Operaciones para ROI Masivo",
         description:
-          "Deploy intelligent AI agents that operate 24/7 to optimize workflows, analyze big data, and drive efficiency. We build secure, private AI solutions that integrate with your enterprise stack to deliver measurable ROI.",
-        cta: "Automate Your Enterprise",
-        image: "/service-agent.png",
+          "Despliega agentes de IA inteligentes que operan 24/7 para optimizar flujos, analizar big data e impulsar eficiencia. Soluciones seguras y privadas que se integran a tu stack.",
+        cta: "Automatizar Empresa",
         gradient: "from-emerald-500 to-green-500",
       },
       diagnosis: {
-        title: "Drowning in Operational Inefficiency?",
+        title: "¿Ahogado en Ineficiencia Operativa?",
         problems: [
-          "High operational costs due to repetitive manual tasks.",
-          "Slow response times affecting customer satisfaction.",
-          "Inability to derive actionable insights from massive datasets.",
-          "Human error risks in critical workflows.",
+          "Altos costos operativos por tareas manuales repetitivas.",
+          "Tiempos de respuesta lentos afectando satisfacción del cliente.",
+          "Incapacidad de derivar insights de grandes volúmenes de datos.",
+          "Riesgos de error humano en flujos críticos.",
         ],
-        painPoint: "Operational Inefficiency",
-        solution: "AI Automation",
+        painPoint: "Costos operativos altos",
+        solution: "Fuerza Laboral Autónoma 24/7",
         comparison: [
-          { them: "Manual Labor", us: "AI Workforce" },
-          { them: "Reactive Support", us: "Proactive Agents" },
-          { them: "Data Silos", us: "Actionable Insights" },
+          { them: "Labor Manual", us: "Fuerza de Trabajo IA" },
+          { them: "Soporte Reactivo", us: "Agentes Proactivos" },
+          { them: "Silos de Datos", us: "Insights Accionables" },
         ],
       },
       roadmap: {
         steps: [
           {
-            title: "Workflow Analysis",
+            title: "Análisis de Flujos",
             description:
-              "Identifying high-value targets for automation within your operations.",
+              "Identificación de objetivos de alto valor para automatización en tus operaciones.",
           },
           {
-            title: "Agent Architecture",
+            title: "Arquitectura de Agentes",
             description:
-              "Designing secure AI agents tailored to specific business functions.",
+              "Diseño de agentes de IA seguros adaptados a funciones de negocio específicas.",
           },
           {
-            title: "Integration & Training",
+            title: "Integración y Entrenamiento",
             description:
-              "Connecting agents to your data lakes and APIs, and fine-tuning models.",
+              "Conexión de agentes a tus data lakes y APIs, y fine-tuning de modelos.",
           },
           {
-            title: "Deployment & Monitoring",
+            title: "Despliegue y Monitoreo",
             description:
-              "Rolling out agents with comprehensive oversight and performance tracking.",
+              "Rollout de agentes con supervisión integral y tracking de performance.",
           },
         ],
       },
       deliverables: [
-        "Custom AI Agent Suite",
-        "Private LLM Deployment",
-        "Real-time Analytics Dashboard",
-        "24/7 Operational Uptime",
-        "ROI Impact Report",
+        "Suite de Agentes IA Custom",
+        "Despliegue de LLM Privado",
+        "Dashboard de Analítica Real-time",
+        "Uptime Operacional 24/7",
+        "Reporte de Impacto ROI",
       ],
       guarantee:
-        "We guarantee a minimum 30% reduction in processing time for automated workflows within the first quarter of deployment.",
+        "Garantizamos una reducción mínima del 30% en tiempo de procesamiento para flujos automatizados en el primer trimestre.",
       faq: [
         {
-          question: "Is our data secure?",
+          question: "¿Nuestros datos están seguros?",
           answer:
-            "Yes. We deploy private instances of AI models within your secure infrastructure, ensuring no data ever leaves your control.",
+            "Sí. Desplegamos instancias privadas de modelos IA dentro de tu infraestructura segura.",
         },
         {
-          question: "Can agents handle complex decision making?",
+          question: "¿Pueden los agentes tomar decisiones complejas?",
           answer:
-            "Our agents are designed with 'human-in-the-loop' protocols for complex scenarios, escalating to human experts when confidence thresholds aren't met.",
+            "Nuestros agentes tienen protocolos 'human-in-the-loop' para escalar a expertos humanos cuando la confianza es baja.",
         },
       ],
     },
     personal: {
       hero: {
-        title: "Your Personal Digital Butler",
-        subtitle: "Reclaim Your Time and Mental Health",
+        title: "Recupera tu Tiempo",
+        subtitle: "Tu Mayordomo Digital Personal",
         description:
-          "Imagine a life where mundane tasks are handled automatically. Our personal AI agents act as your digital butler, managing schedules, emails, and research, giving you back the freedom to focus on what matters.",
-        cta: "Get Your Assistant",
-        image: "/service-agent.png",
+          "Imagina una vida donde las tareas mundanas se manejan solas. Nuestros agentes personales gestionan agendas, correos e investigación, devolviéndote la libertad.",
+        cta: "Obtener Asistente",
         gradient: "from-emerald-500 to-green-500",
       },
       diagnosis: {
-        title: "Feeling Overwhelmed?",
+        title: "¿Sintiéndote Abrumado?",
         problems: [
-          "Constant context switching killing your productivity.",
-          "Email inbox always overflowing.",
-          "Missing important appointments or deadlines.",
-          "Zero time for personal growth or relaxation.",
+          "Cambio de contexto constante matando tu productividad.",
+          "Bandeja de entrada siempre desbordada.",
+          "Perdiendo citas o fechas límite importantes.",
+          "Cero tiempo para crecimiento personal o relajación.",
         ],
-        painPoint: "Time Scarcity",
-        solution: "Personal AI Butler",
+        painPoint: "Burnout por tareas repetitivas",
+        solution: "Asistente Personal Digital",
         comparison: [
-          { them: "Disorganized Chaos", us: "Automated Order" },
-          { them: "Missed Opportunities", us: "Perfect Timing" },
-          { them: "Burnout", us: "Peace of Mind" },
+          { them: "Caos Desorganizado", us: "Orden Automatizado" },
+          { them: "Oportunidades Perdidas", us: "Timing Perfecto" },
+          { them: "Burnout", us: "Paz Mental" },
         ],
       },
       roadmap: {
         steps: [
           {
-            title: "Lifestyle Assessment",
+            title: "Evaluación de Estilo de Vida",
             description:
-              "Understanding your daily friction points and automation needs.",
+              "Entendimiento de tus puntos de fricción diarios y necesidades de automatización.",
           },
           {
-            title: "Agent Configuration",
+            title: "Configuración del Agente",
             description:
-              "Setting up your personal AI with access to your calendar and tools.",
+              "Setup de tu IA personal con acceso a tu calendario y herramientas.",
           },
           {
-            title: "Automation Setup",
+            title: "Setup de Automatización",
             description:
-              "Creating workflows for email filtering, scheduling, and information retrieval.",
+              "Creación de flujos para filtrado de email, agendamiento y búsqueda de información.",
           },
           {
             title: "Onboarding",
             description:
-              "Teaching you how to interact effectively with your new digital assistant.",
+              "Enseñándote a interactuar efectivamente con tu nuevo asistente digital.",
           },
         ],
       },
       deliverables: [
-        "Personalized AI Assistant",
-        "Email & Calendar Integration",
-        "Automated Research Tools",
-        "Daily Briefing System",
-        "Mobile Access App",
+        "Asistente IA Personalizado",
+        "Integración Email y Calendario",
+        "Herramientas de Investigación Auto",
+        "Sistema de Briefing Diario",
+        "App de Acceso Móvil",
       ],
       guarantee:
-        "If you don't save at least 10 hours a week in your first month, we'll refund your setup fee.",
+        "Si no ahorras al menos 10 horas a la semana en tu primer mes, te devolvemos el fee de setup.",
       faq: [
         {
-          question: "Is it difficult to set up?",
+          question: "¿Es difícil de configurar?",
           answer:
-            "No, we handle all the technical configuration. You just connect your accounts and start chatting with your assistant.",
+            "No, manejamos toda la configuración técnica. Solo conectas tus cuentas y empiezas a chatear.",
         },
         {
-          question: "What about my privacy?",
+          question: "¿Qué hay de mi privacidad?",
           answer:
-            "Your personal agent is configured with strict privacy controls. We do not sell or share your personal data.",
+            "Tu agente personal está configurado con controles de privacidad estrictos. No vendemos ni compartimos tus datos.",
         },
       ],
     },

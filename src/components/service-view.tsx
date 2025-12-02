@@ -15,9 +15,10 @@ interface ServiceViewProps {
   content: ServiceContent;
   mode: string;
   scope: string;
+  image: string;
 }
 
-export function ServiceView({ content, mode, scope }: ServiceViewProps) {
+export function ServiceView({ content, mode, scope, image }: ServiceViewProps) {
   const themeColors = {
     software: "indigo",
     web: "rose",
@@ -107,7 +108,7 @@ export function ServiceView({ content, mode, scope }: ServiceViewProps) {
                 3D RENDER PLACEHOLDER
               </div>
               <Image
-                src={content.hero.image}
+                src={image}
                 alt={content.hero.title}
                 fill
                 className="object-cover hover:scale-105 transition-transform duration-700"

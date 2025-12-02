@@ -1,6 +1,6 @@
 "use client";
 
-import { ServiceContent as ServiceContentData, ServiceMode } from "@/lib/services-data";
+import { ServiceGroup, ServiceMode } from "@/lib/services-data";
 import { useScope } from "@/components/scope-provider";
 import { motion, useScroll, useTransform } from "framer-motion";
 import {
@@ -12,12 +12,13 @@ import {
   Minus,
 } from "lucide-react";
 import Link from "next/link";
+import NextImage from "next/image";
 import { useRef } from "react";
 import { ParticlesBackground } from "@/components/ui/particles-background";
 
 interface ServiceContentProps {
   mode: ServiceMode;
-  data: { enterprise: ServiceContentData; personal: ServiceContentData };
+  data: ServiceGroup;
 }
 
 export function ServiceContent({ mode, data: fullData }: ServiceContentProps) {
@@ -40,42 +41,94 @@ export function ServiceContent({ mode, data: fullData }: ServiceContentProps) {
       <ParticlesBackground mode={mode} />
 
       {/* --- 1. HERO SECTION (Immersive) --- */}
-      <section className="relative min-h-[60vh] flex flex-col items-center justify-center px-6 text-center z-10 pt-20">
-        {/* Back Button */}
-        <Link
-          href="/"
-          className="absolute top-8 left-6 md:left-12 flex items-center gap-2 text-zinc-500 hover:text-white transition-colors text-sm font-mono uppercase tracking-wider"
-        >
-          <ArrowLeft className="w-4 h-4" /> Nexus
-        </Link>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="max-w-4xl mx-auto"
-        >
-          <div
-            className={`inline-flex items-center gap-2 px-3 py-1 rounded-full border border-zinc-800 bg-zinc-900/50 backdrop-blur-sm text-xs font-mono uppercase tracking-wider mb-8 text-zinc-400`}
+      {/* --- 1. HERO SECTION (Split Hero) --- */}
+      <section className="relative min-h-[80vh] flex items-center justify-center px-6 z-10 pt-20">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Left Column: The Hook */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="text-left order-2 lg:order-1"
           >
-            <span
-              className={`w-2 h-2 rounded-full bg-gradient-to-r ${data.hero.gradient}`}
-            ></span>
-            {mode.toUpperCase()} PROTOCOL
-          </div>
-
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter mb-8">
-            <span
-              className={`bg-clip-text text-transparent bg-gradient-to-b ${data.hero.gradient} from-white to-zinc-500`}
+            <Link
+              href="/"
+              className="inline-flex items-center gap-2 text-zinc-500 hover:text-white transition-colors text-sm font-mono uppercase tracking-wider mb-8"
             >
-              {data.hero.title}
-            </span>
-          </h1>
+              <ArrowLeft className="w-4 h-4" /> Nexus
+            </Link>
 
-          <p className="text-xl md:text-2xl text-zinc-400 max-w-2xl mx-auto leading-relaxed">
-            {data.hero.subtitle}
-          </p>
-        </motion.div>
+            <div
+              className={`inline-flex items-center gap-2 px-3 py-1 rounded-full border border-zinc-800 bg-zinc-900/50 backdrop-blur-sm text-xs font-mono uppercase tracking-wider mb-6 text-zinc-400`}
+            >
+              <span
+                className={`w-2 h-2 rounded-full bg-gradient-to-r ${data.hero.gradient}`}
+              ></span>
+              {mode.toUpperCase()} PROTOCOL
+            </div>
+
+            <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-6 leading-[1.1]">
+              <span
+                className={`bg-clip-text text-transparent bg-gradient-to-b ${data.hero.gradient} from-white to-zinc-500`}
+              >
+                {data.hero.title}
+              </span>
+            </h1>
+
+            <p className="text-xl text-zinc-400 max-w-xl leading-relaxed mb-8">
+              {data.hero.subtitle}
+            </p>
+
+            <Link href={`/?mode=${mode}`}>
+              <button
+                className={`group relative px-8 py-4 rounded-full text-base font-bold bg-white text-black hover:scale-105 transition-all shadow-[0_0_20px_rgba(255,255,255,0.2)] flex items-center gap-2 overflow-hidden`}
+              >
+                <span className="relative z-10 flex items-center gap-2">
+                  {data.hero.cta}
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </span>
+                <div
+                  className={`absolute inset-0 bg-gradient-to-r ${data.hero.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
+                ></div>
+              </button>
+            </Link>
+          </motion.div>
+
+          {/* Right Column: The Visual */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="relative order-1 lg:order-2 flex justify-center"
+          >
+            {/* Glow Effect */}
+            <div
+              className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] rounded-full blur-3xl opacity-20 bg-gradient-to-r ${data.hero.gradient} -z-10`}
+            ></div>
+
+            {/* Floating Image */}
+            <motion.div
+              animate={{ y: [0, -20, 0] }}
+              transition={{
+                duration: 6,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+              className="relative w-full max-w-md aspect-square"
+            >
+               {/* Using next/image for optimization */}
+               <div className="relative w-full h-full">
+                 <NextImage
+                    src={fullData.image} 
+                    alt={data.hero.title}
+                    fill
+                    className="object-contain drop-shadow-2xl"
+                    priority
+                 />
+               </div>
+            </motion.div>
+          </motion.div>
+        </div>
 
         {/* Scroll Indicator */}
         <motion.div

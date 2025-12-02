@@ -97,3 +97,5 @@ export async function deleteDeal(id: string) {
     return { success: false, error: "Failed to delete deal" };
   }
 }
+
+

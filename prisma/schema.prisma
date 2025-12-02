@@ -14,10 +14,14 @@ model User {
   email     String   @unique
   password  String
   role      String   @default("DEV") // DEV, ADMIN, CLIENT
+  isClient  Boolean  @default(false)
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   projects  Project[]
+  clientProjects Project[] @relation("ClientProjects")
   messages  Message[]
+  resetToken String?
+  resetTokenExpiry DateTime?
 }
 
 model Project {
@@ -26,6 +30,9 @@ model Project {
   status         String   @default("PLANNING")
   assignedToUserId String?
   assignedToUser User?    @relation(fields: [assignedToUserId], references: [id])
+  clientId       String?
+  client         User?    @relation("ClientProjects", fields: [clientId], references: [id])
+  documents      Document[]
   createdAt      DateTime @default(now())
   updatedAt      DateTime @updatedAt
 }
@@ -55,5 +62,15 @@ model Message {
   channel   Channel  @relation(fields: [channelId], references: [id])
   userId    String?  // Optional for system messages or if user is not authenticated
   user      User?    @relation(fields: [userId], references: [id])
+  createdAt DateTime @default(now())
+}
+
+model Document {
+  id        String   @id @default(cuid())
+  title     String
+  url       String
+  type      String   // INVOICE, MANUAL, CONTRACT
+  projectId String
+  project   Project  @relation(fields: [projectId], references: [id])
   createdAt DateTime @default(now())
 }

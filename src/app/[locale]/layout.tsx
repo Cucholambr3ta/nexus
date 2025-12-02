@@ -5,6 +5,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { ThemeProvider } from "@/components/theme-provider";
 import { CommandMenu } from "@/components/command-menu";
+import { Toaster } from "sonner";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -39,6 +40,7 @@ export default async function LocaleLayout({
             <main className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden">
               {children}
             </main>
+            <Toaster position="top-center" richColors />
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>

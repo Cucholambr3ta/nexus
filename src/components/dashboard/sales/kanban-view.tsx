@@ -12,6 +12,7 @@ import {
   Plus,
 } from "lucide-react";
 import { useRouter } from "next/navigation";
+import { OnboardClientDialog } from "./onboard-client-dialog";
 
 interface KanbanViewProps {
   initialDeals: Deal[];
@@ -123,14 +124,19 @@ export function KanbanView({ initialDeals }: KanbanViewProps) {
                     {deal.clientName}
                   </div>
 
-                  <div className="flex justify-between items-end">
+                    <div className="flex justify-between items-end">
                     <div className="font-mono text-sm text-emerald-400 font-medium">
                       ${deal.value.toLocaleString()}
                     </div>
-                    <div className="text-[10px] text-zinc-600">
-                      {formatDistanceToNow(new Date(deal.updatedAt), {
-                        addSuffix: true,
-                      })}
+                    <div className="flex flex-col items-end gap-2">
+                      <div className="text-[10px] text-zinc-600">
+                        {formatDistanceToNow(new Date(deal.updatedAt), {
+                          addSuffix: true,
+                        })}
+                      </div>
+                      {stage === "Won" && (
+                        <OnboardClientDialog deal={deal} />
+                      )}
                     </div>
                   </div>
 
