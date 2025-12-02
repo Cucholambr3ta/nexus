@@ -1,37 +1,40 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { useForm } from "react-hook-form"
-import { zodResolver } from "@hookform/resolvers/zod"
-import * as z from "zod"
-import { Loader2, Terminal } from "lucide-react"
-import { useTranslations } from "next-intl"
-import { cn } from "@/lib/utils"
+import * as React from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import * as z from "zod";
+import { Loader2, Terminal } from "lucide-react";
+import { useTranslations } from "next-intl";
+import { cn } from "@/lib/utils";
 
 const formSchema = z.object({
   command: z.string().min(1),
-})
+});
 
 interface CommandTerminalProps {
-  onExecute: (command: string) => void
-  isExecuting: boolean
+  onExecute: (command: string) => void;
+  isExecuting: boolean;
 }
 
-export function CommandTerminal({ onExecute, isExecuting }: CommandTerminalProps) {
-  const t = useTranslations("Index")
-  const [isFocused, setIsFocused] = React.useState(false)
+export function CommandTerminal({
+  onExecute,
+  isExecuting,
+}: CommandTerminalProps) {
+  const t = useTranslations("Index");
+  const [isFocused, setIsFocused] = React.useState(false);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       command: "",
     },
-  })
+  });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    onExecute(values.command)
-    form.reset()
+    onExecute(values.command);
+    form.reset();
   }
 
   return (
@@ -41,7 +44,9 @@ export function CommandTerminal({ onExecute, isExecuting }: CommandTerminalProps
       transition={{ duration: 0.5 }}
       className={cn(
         "w-full max-w-2xl rounded-xl border bg-card p-4 shadow-sm transition-all duration-300",
-        isFocused ? "border-primary/50 shadow-md ring-1 ring-primary/20" : "border-border"
+        isFocused
+          ? "border-primary/50 shadow-md ring-1 ring-primary/20"
+          : "border-border",
       )}
     >
       <div className="flex items-center gap-2 border-b border-border/50 pb-3 mb-3">
@@ -56,9 +61,14 @@ export function CommandTerminal({ onExecute, isExecuting }: CommandTerminalProps
         </div>
       </div>
 
-      <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col gap-4">
+      <form
+        onSubmit={form.handleSubmit(onSubmit)}
+        className="flex flex-col gap-4"
+      >
         <div className="relative">
-          <span className="absolute left-0 top-0 text-primary font-mono text-lg">{">"}</span>
+          <span className="absolute left-0 top-0 text-primary font-mono text-lg">
+            {">"}
+          </span>
           <textarea
             {...form.register("command")}
             onFocus={() => setIsFocused(true)}
@@ -78,7 +88,7 @@ export function CommandTerminal({ onExecute, isExecuting }: CommandTerminalProps
             disabled={isExecuting || !form.formState.isValid}
             className={cn(
               "relative overflow-hidden rounded-md bg-primary px-6 py-2 text-sm font-medium text-primary-foreground transition-all hover:bg-primary/90 disabled:opacity-50 disabled:cursor-not-allowed",
-              isExecuting && "pl-10"
+              isExecuting && "pl-10",
             )}
           >
             <AnimatePresence mode="wait">
@@ -99,5 +109,5 @@ export function CommandTerminal({ onExecute, isExecuting }: CommandTerminalProps
         </div>
       </form>
     </motion.div>
-  )
+  );
 }

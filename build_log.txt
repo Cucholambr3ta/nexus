@@ -1,0 +1,54 @@
+
+> app@0.1.0 build
+> next build
+
+   Ôû▓ Next.js 16.0.6 (Turbopack)
+   - Environments: .env.local, .env
+
+ ÔÜá The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+   Creating an optimized production build ...
+
+> Build error occurred
+Error: Turbopack build failed with 2 errors:
+./src/auth.ts:1:1
+Module not found: Can't resolve 'next-auth'
+> 1 | import NextAuth from "next-auth"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import { PrismaAdapter } from "@auth/prisma-adapter"
+  3 | import Credentials from "next-auth/providers/credentials"
+  4 | import bcrypt from "bcryptjs"
+
+
+
+Import trace:
+  Server Component:
+    ./src/auth.ts
+    ./src/app/dashboard/team/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/auth.ts:3:1
+Module not found: Can't resolve 'next-auth/providers/credentials'
+  1 | import NextAuth from "next-auth"
+  2 | import { PrismaAdapter } from "@auth/prisma-adapter"
+> 3 | import Credentials from "next-auth/providers/credentials"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import bcrypt from "bcryptjs"
+  5 | import prisma from "@/lib/prisma"
+  6 | import { z } from "zod"
+
+
+
+Import trace:
+  Server Component:
+    ./src/auth.ts
+    ./src/app/dashboard/team/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+    at <unknown> (./src/auth.ts:1:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/auth.ts:3:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)

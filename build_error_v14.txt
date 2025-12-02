@@ -1,0 +1,24 @@
+
+> app@0.1.0 build
+> next build
+
+   Ôû▓ Next.js 16.0.6 (Turbopack)
+   - Environments: .env.local, .env
+
+ ÔÜá The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+   Creating an optimized production build ...
+ Ô£ô Compiled successfully in 29.4s
+   Running TypeScript ...
+Failed to compile.
+
+./src/components/services/service-content.tsx:188:27
+Type error: Property 'map' does not exist on type '{ steps: { title: string; description: string; }[]; }'.
+
+  186 |
+  187 |           <div className="space-y-24 relative">
+> 188 |             {data.roadmap.map((step, idx) => (
+      |                           ^
+  189 |               <motion.div
+  190 |                 key={idx}
+  191 |                 initial={{ opacity: 0, y: 50 }}
+Next.js build worker exited with code: 1 and signal: null

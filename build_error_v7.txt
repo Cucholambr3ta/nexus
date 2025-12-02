@@ -1,0 +1,24 @@
+
+> app@0.1.0 build
+> next build
+
+   Ôû▓ Next.js 16.0.6 (Turbopack)
+   - Environments: .env.local, .env
+
+ ÔÜá The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+   Creating an optimized production build ...
+ Ô£ô Compiled successfully in 24.4s
+   Running TypeScript ...
+Failed to compile.
+
+./src/components/nexus-terminal.tsx:36:3
+Type error: Unused '@ts-expect-error' directive.
+
+  34 |
+  35 |   // useChat hook with standard API
+> 36 |   // @ts-expect-error - api option is valid at runtime but missing in types
+     |   ^
+  37 |   const { messages, sendMessage, status } = useChat({
+  38 |     api: "/api/chat",
+  39 |     body: { mode, agentScope: scope },
+Next.js build worker exited with code: 1 and signal: null

@@ -1,0 +1,74 @@
+"use client";
+
+import {
+  AreaChart,
+  Area,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  ResponsiveContainer,
+} from "recharts";
+
+interface RevenueChartProps {
+  data: { name: string; value: number }[];
+}
+
+export function RevenueChart({ data }: RevenueChartProps) {
+  return (
+    <div className="h-[300px] w-full">
+      <ResponsiveContainer width="100%" height="100%">
+        <AreaChart
+          data={data}
+          margin={{
+            top: 10,
+            right: 30,
+            left: 0,
+            bottom: 0,
+          }}
+        >
+          <defs>
+            <linearGradient id="colorRevenue" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="5%" stopColor="#10b981" stopOpacity={0.3} />
+              <stop offset="95%" stopColor="#10b981" stopOpacity={0} />
+            </linearGradient>
+          </defs>
+          <CartesianGrid
+            strokeDasharray="3 3"
+            stroke="#27272a"
+            vertical={false}
+          />
+          <XAxis
+            dataKey="name"
+            stroke="#71717a"
+            fontSize={12}
+            tickLine={false}
+            axisLine={false}
+          />
+          <YAxis
+            stroke="#71717a"
+            fontSize={12}
+            tickLine={false}
+            axisLine={false}
+            tickFormatter={(value) => `$${value}`}
+          />
+          <Tooltip
+            contentStyle={{
+              backgroundColor: "#18181b",
+              borderColor: "#27272a",
+              color: "#f4f4f5",
+            }}
+            itemStyle={{ color: "#10b981" }}
+          />
+          <Area
+            type="monotone"
+            dataKey="value"
+            stroke="#10b981"
+            fillOpacity={1}
+            fill="url(#colorRevenue)"
+          />
+        </AreaChart>
+      </ResponsiveContainer>
+    </div>
+  );
+}

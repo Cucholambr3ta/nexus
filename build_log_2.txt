@@ -1,0 +1,24 @@
+
+> app@0.1.0 build
+> next build
+
+   Ôû▓ Next.js 16.0.6 (Turbopack)
+   - Environments: .env.local, .env
+
+ ÔÜá The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+   Creating an optimized production build ...
+ Ô£ô Compiled successfully in 24.7s
+   Running TypeScript ...
+Failed to compile.
+
+./src/app/dashboard/team/page.tsx:95:23
+Type error: Parameter 'user' implicitly has an 'any' type.
+
+  93 |         <h2 className="text-xl font-semibold mb-4 text-zinc-300">Active Members</h2>
+  94 |         <div className="grid gap-4">
+> 95 |           {users.map((user) => (
+     |                       ^
+  96 |             <div key={user.id} className="flex items-center justify-between bg-zinc-900/30 border border-zinc-800/50 p-4 rounded-lg hover:border-zinc-700 transition-colors">
+  97 |               <div>
+  98 |                 <p className="font-medium text-zinc-200">{user.name || "Unnamed"}</p>
+Next.js build worker exited with code: 1 and signal: null

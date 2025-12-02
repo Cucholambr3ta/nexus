@@ -1,0 +1,199 @@
+
+> app@0.1.0 dev
+> next dev --turbo
+
+   Ôû▓ Next.js 16.0.6 (Turbopack)
+   - Local:         http://localhost:3000
+   - Network:       http://172.18.128.1:3000
+   - Environments: .env.local, .env
+
+ Ô£ô Starting...
+ ÔÜá The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+ Ô£ô Ready in 5.5s
+ Ôùï Compiling /[locale] ...
+Server Messages Loaded: [ 'Index' ]
+C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\node_modules_d30673fe._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\src_f442a44f._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+Error: MISSING_MESSAGE: Could not resolve `Index.hero.title` in messages for locale `es`.
+    at HomeContent (C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\src_f442a44f._.js:1485:51) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'Could not resolve `Index.hero.title` in messages for locale `es`.'
+}
+C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\node_modules_d30673fe._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\src_f442a44f._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+Error: MISSING_MESSAGE: Could not resolve `Index.hero.subtitle` in messages for locale `es`.
+    at HomeContent (C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\src_f442a44f._.js:1493:51) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'Could not resolve `Index.hero.subtitle` in messages for locale `es`.'
+}
+C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\node_modules_d30673fe._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\src_f442a44f._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+Error: MISSING_MESSAGE: Could not resolve `Index.terminal.placeholder.discovery` in messages for locale `es`.
+    at NexusTerminal (C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\src_f442a44f._.js:230:26) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'Could not resolve `Index.terminal.placeholder.discovery` in messages for locale `es`.'
+}
+C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\node_modules_d30673fe._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\src_f442a44f._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+Error: MISSING_MESSAGE: Could not resolve `Index.terminal.placeholder.software` in messages for locale `es`.
+    at NexusTerminal (C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\src_f442a44f._.js:239:26) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'Could not resolve `Index.terminal.placeholder.software` in messages for locale `es`.'
+}
+C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\node_modules_d30673fe._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\src_f442a44f._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+Error: MISSING_MESSAGE: Could not resolve `Index.terminal.placeholder.web` in messages for locale `es`.
+    at NexusTerminal (C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\src_f442a44f._.js:248:26) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'Could not resolve `Index.terminal.placeholder.web` in messages for locale `es`.'
+}
+C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\node_modules_d30673fe._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\src_f442a44f._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+Error: MISSING_MESSAGE: Could not resolve `Index.terminal.placeholder.agent` in messages for locale `es`.
+    at NexusTerminal (C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\src_f442a44f._.js:257:26) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'Could not resolve `Index.terminal.placeholder.agent` in messages for locale `es`.'
+}
+C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\node_modules_d30673fe._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\src_f442a44f._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+Error: MISSING_MESSAGE: Could not resolve `Index.terminal.modes.discovery` in messages for locale `es`.
+    at <unknown> (C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\src_f442a44f._.js:378:43)
+    at Array.map (<anonymous>)
+    at NexusTerminal (C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\src_f442a44f._.js:361:19) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'Could not resolve `Index.terminal.modes.discovery` in messages for locale `es`.'
+}
+C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\node_modules_d30673fe._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\src_f442a44f._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+Error: MISSING_MESSAGE: Could not resolve `Index.terminal.modes.software` in messages for locale `es`.
+    at <unknown> (C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\src_f442a44f._.js:378:43)
+    at Array.map (<anonymous>)
+    at NexusTerminal (C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\src_f442a44f._.js:361:19) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'Could not resolve `Index.terminal.modes.software` in messages for locale `es`.'
+}
+C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\node_modules_d30673fe._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\src_f442a44f._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+Error: MISSING_MESSAGE: Could not resolve `Index.terminal.modes.web` in messages for locale `es`.
+    at <unknown> (C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\src_f442a44f._.js:378:43)
+    at Array.map (<anonymous>)
+    at NexusTerminal (C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\src_f442a44f._.js:361:19) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'Could not resolve `Index.terminal.modes.web` in messages for locale `es`.'
+}
+C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\node_modules_d30673fe._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\src_f442a44f._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+Error: MISSING_MESSAGE: Could not resolve `Index.terminal.modes.agent` in messages for locale `es`.
+    at <unknown> (C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\src_f442a44f._.js:378:43)
+    at Array.map (<anonymous>)
+    at NexusTerminal (C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\src_f442a44f._.js:361:19) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'Could not resolve `Index.terminal.modes.agent` in messages for locale `es`.'
+}
+C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\node_modules_d30673fe._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\src_f442a44f._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+Error: MISSING_MESSAGE: Could not resolve `Index.cta.start` in messages for locale `es`.
+    at NexusTerminal (C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\src_f442a44f._.js:584:64) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'Could not resolve `Index.cta.start` in messages for locale `es`.'
+}
+C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\node_modules_d30673fe._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\src_f442a44f._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+Error: MISSING_MESSAGE: Could not resolve `Index.services.software.title` in messages for locale `es`.
+    at ServicesSection (C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\src_f442a44f._.js:788:20) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'Could not resolve `Index.services.software.title` in messages for locale `es`.'
+}
+C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\node_modules_d30673fe._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\src_f442a44f._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+Error: MISSING_MESSAGE: Could not resolve `Index.services.software.subtitle` in messages for locale `es`.
+    at ServicesSection (C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\src_f442a44f._.js:789:23) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'Could not resolve `Index.services.software.subtitle` in messages for locale `es`.'
+}
+C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\node_modules_d30673fe._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\src_f442a44f._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+Error: MISSING_MESSAGE: Could not resolve `Index.services.software.description` in messages for locale `es`.
+    at ServicesSection (C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\src_f442a44f._.js:790:26) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'Could not resolve `Index.services.software.description` in messages for locale `es`.'
+}
+C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\node_modules_d30673fe._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\src_f442a44f._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+Error: MISSING_MESSAGE: Could not resolve `Index.services.web.title` in messages for locale `es`.
+    at ServicesSection (C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\src_f442a44f._.js:807:20) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'Could not resolve `Index.services.web.title` in messages for locale `es`.'
+}
+C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\node_modules_d30673fe._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\src_f442a44f._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+Error: MISSING_MESSAGE: Could not resolve `Index.services.web.subtitle` in messages for locale `es`.
+    at ServicesSection (C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\src_f442a44f._.js:808:23) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'Could not resolve `Index.services.web.subtitle` in messages for locale `es`.'
+}
+C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\node_modules_d30673fe._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\src_f442a44f._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+Error: MISSING_MESSAGE: Could not resolve `Index.services.web.description` in messages for locale `es`.
+    at ServicesSection (C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\src_f442a44f._.js:809:26) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'Could not resolve `Index.services.web.description` in messages for locale `es`.'
+}
+C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\node_modules_d30673fe._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\src_f442a44f._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+Error: MISSING_MESSAGE: Could not resolve `Index.services.agent.title` in messages for locale `es`.
+    at ServicesSection (C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\src_f442a44f._.js:826:20) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'Could not resolve `Index.services.agent.title` in messages for locale `es`.'
+}
+C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\node_modules_d30673fe._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\src_f442a44f._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+Error: MISSING_MESSAGE: Could not resolve `Index.services.agent.subtitle` in messages for locale `es`.
+    at ServicesSection (C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\src_f442a44f._.js:827:23) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'Could not resolve `Index.services.agent.subtitle` in messages for locale `es`.'
+}
+C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\node_modules_d30673fe._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\src_f442a44f._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+Error: MISSING_MESSAGE: Could not resolve `Index.services.agent.description` in messages for locale `es`.
+    at ServicesSection (C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\src_f442a44f._.js:828:26) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'Could not resolve `Index.services.agent.description` in messages for locale `es`.'
+}
+C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\node_modules_d30673fe._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\src_f442a44f._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+Error: MISSING_MESSAGE: Could not resolve `Index.team.title` in messages for locale `es`.
+    at ServicesSection (C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\src_f442a44f._.js:852:35) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'Could not resolve `Index.team.title` in messages for locale `es`.'
+}
+C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\node_modules_d30673fe._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\src_f442a44f._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+Error: MISSING_MESSAGE: Could not resolve `Index.team.subtitle` in messages for locale `es`.
+    at ServicesSection (C:\Workspace\Enterpriseproyectn8n\.next\dev\server\chunks\ssr\src_f442a44f._.js:860:35) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'Could not resolve `Index.team.subtitle` in messages for locale `es`.'
+}
+ GET /es 200 in 25.6s (compile: 22.9s, proxy.ts: 395ms, render: 2.3s)
+ Ô¿» ./src/i18n/request.ts:7:22
+Module not found: Can't resolve ('../../messages/' <dynamic> '.json' | '../../messages/en.json')
+   5 |   return {
+   6 |     locale: effectiveLocale,
+>  7 |     messages: (await import(`../../messages/${effectiveLocale}.json`)).default
+     |                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 |   };
+   9 | });
+  10 |
+
+
+
+Import trace:
+  Server Component:
+    ./src/i18n/request.ts
+    ./node_modules/next-intl/dist/esm/development/server/react-server/getConfig.js
+    ./node_modules/next-intl/dist/esm/development/server/react-server/getMessages.js
+    ./src/app/[locale]/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+

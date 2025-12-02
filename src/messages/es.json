@@ -1,0 +1,118 @@
+{
+  "Index": {
+    "hero": {
+      "title": "CuchoLambreta Nexus",
+      "subtitle": "El Consejo Global de Orquestación Digital. Cuéntanos tu visión, nosotros diseñamos la arquitectura."
+    },
+    "terminal": {
+      "placeholder": {
+        "discovery": "Describe tu Plataforma SaaS o Sistema Complejo...",
+        "software": "Describe tu Plataforma SaaS o Sistema Complejo...",
+        "web": "Describe tu Sitio Corporativo o Portafolio...",
+        "agent": "Describe la tarea que deseas automatizar..."
+      },
+      "logs": {
+        "init": "Inicializando Protocolos del Equipo...",
+        "analyzing": "El Consejo está analizando...",
+        "handover": "Solicitud Aprobada por el Consejo."
+      },
+      "modes": {
+        "discovery": "Descubrimiento",
+        "software": "Software",
+        "web": "Web",
+        "agent": "Agente"
+      },
+      "scopes": {
+        "enterprise": "Empresarial",
+        "personal": "Personal"
+      }
+    },
+    "services": {
+      "software": {
+        "title": "Arquitectura de Software",
+        "subtitle": "Sistemas robustos.",
+        "description": "Sistemas escalables y seguros construidos por nuestros ingenieros senior."
+      },
+      "web": {
+        "title": "Experiencia Web",
+        "subtitle": "Diseño que convierte.",
+        "description": "Sitios de alto rendimiento diseñados para convertir."
+      },
+      "agent": {
+        "title": "Fuerza Laboral IA",
+        "subtitle": "Agentes autónomos 24/7.",
+        "description": "Agentes autónomos que trabajan mientras nosotros dormimos."
+      }
+    },
+    "team": {
+      "title": "El Consejo",
+      "subtitle": "Un colectivo de expertos unidos por la excelencia."
+    },
+    "cta": {
+      "bookCall": "Agendar Estrategia",
+      "start": "Iniciar Protocolo"
+    }
+  },
+  "ServicesPage": {
+    "back": "Volver a Nexus",
+    "diagnosis": "El Diagnóstico",
+    "diagnosisSubtitle": "Por qué el enfoque tradicional te está fallando.",
+    "painPoint": "Punto de Dolor",
+    "solution": "Nuestra Solución",
+    "oldWay": "Agencias Tradicionales",
+    "newWay": "Cucho Lambreta",
+    "roadmap": "Hoja de Ruta de Ejecución",
+    "deliverables": "Entregables Tangibles",
+    "guarantee": "Garantía 100% Libre de Riesgo",
+    "faq": "Preguntas Frecuentes",
+    "ready": "¿Listo para Empezar?",
+    "initProtocol": "Iniciar Protocolo"
+  },
+  "DynamicDescription": {
+    "discovery": {
+      "personal": "Deja que nuestra IA analice tus necesidades personales.",
+      "enterprise": "Nuestra IA evaluará tus requerimientos corporativos."
+    },
+    "software": {
+      "personal": "Construye software personalizado para tus ideas.",
+      "enterprise": "Desarrolla arquitecturas escalables de nivel empresarial."
+    },
+    "web": {
+      "personal": "Crea un portafolio personal impresionante.",
+      "enterprise": "Diseña un portal corporativo de alta conversión."
+    },
+    "agent": {
+      "personal": "Despliega agentes de IA personales para tareas diarias.",
+      "enterprise": "Integra automatización avanzada de fuerza laboral con IA."
+    }
+  },
+  "ProjectRequestModal": {
+    "title": "Iniciar un Proyecto",
+    "subtitle": "Cuéntanos sobre tu visión.",
+    "successTitle": "Solicitud Recibida",
+    "successMessage": "Nos pondremos en contacto pronto para discutir los detalles.",
+    "fields": {
+      "name": "Nombre",
+      "email": "Correo Electrónico",
+      "company": "Empresa (Opcional)",
+      "type": "Tipo",
+      "budget": "Presupuesto",
+      "description": "Descripción del Proyecto"
+    },
+    "placeholders": {
+      "name": "Juan Pérez",
+      "email": "juan@ejemplo.com",
+      "company": "Acme Inc.",
+      "budget": "ej. $5k - $10k",
+      "description": "Describe los objetivos y requerimientos de tu proyecto..."
+    },
+    "options": {
+      "web": "Desarrollo Web",
+      "software": "Ingeniería de Software",
+      "ai": "Integración de IA",
+      "consulting": "Consultoría"
+    },
+    "submit": "Enviar Solicitud",
+    "sending": "Enviando..."
+  }
+}

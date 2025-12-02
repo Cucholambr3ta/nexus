@@ -1,0 +1,24 @@
+
+> app@0.1.0 build
+> next build
+
+   Ôû▓ Next.js 16.0.6 (Turbopack)
+   - Environments: .env.local, .env
+
+ ÔÜá The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+   Creating an optimized production build ...
+ Ô£ô Compiled successfully in 25.8s
+   Running TypeScript ...
+Failed to compile.
+
+./src/components/services/service-content.tsx:62:77
+Type error: Property 'gradient' does not exist on type '{ title: string; subtitle: string; description: string; cta: string; image: string; }'.
+
+  60 |           >
+  61 |             <span
+> 62 |               className={`w-2 h-2 rounded-full bg-gradient-to-r ${data.hero.gradient}`}
+     |                                                                             ^
+  63 |             ></span>
+  64 |             {mode.toUpperCase()} PROTOCOL
+  65 |           </div>
+Next.js build worker exited with code: 1 and signal: null

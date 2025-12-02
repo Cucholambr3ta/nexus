@@ -1,5 +1,5 @@
-import { google } from '@ai-sdk/google';
-import { streamText } from 'ai';
+import { google } from "@ai-sdk/google";
+import { streamText } from "ai";
 
 // Allow streaming responses up to 30 seconds
 export const maxDuration = 30;
@@ -10,7 +10,19 @@ export async function POST(req: Request) {
   let systemPrompt = `ROLE: Senior Requirement Analyst & Gatekeeper.
 PROTOCOL: Ask clarifying questions. Output [REQ_COMPLETE] <Summary> when done.`;
 
-  if (mode === 'software') {
+  if (mode === "discovery") {
+    systemPrompt = `ROLE: "CuchoAnalyst" - Chief Content Officer & Data Architect.
+CONTEXT: You are the first touchpoint for a high-end digital consultancy.
+GOAL: Diagnose the user's needs to recommend the best service: Software Architecture, Web Experience, or AI Agents.
+TONE: Authoritative, Insightful, "Authority Marketing".
+PROTOCOL:
+1. Ask 2-3 probing questions to understand their pain points and goals.
+2. Determine if they need:
+   - 'software' (Legacy migration, Scalability, MVP)
+   - 'web' (Brand authority, Portfolio, Design)
+   - 'agent' (Automation, ROI, Personal Assistant)
+3. Once clear, output ONLY: [REDIRECT: <MODE>] (e.g., [REDIRECT: software])`;
+  } else if (mode === "software") {
     systemPrompt = `ROLE: "ProyectLambreta" - Senior Software Architect.
 CONTEXT: You are designing robust, military-grade software ecosystems.
 FOCUS: Database Schema, Security (OWASP), Scalability, Microservices, Tech Stack (Next.js, NestJS, Postgres).
@@ -20,7 +32,7 @@ PROTOCOL:
 2. Ask for: Scale, Data Sensitivity, Integration points.
 3. Refine until you have a solid Architecture Brief.
 4. Output: [REQ_COMPLETE] <Technical Architecture Summary>`;
-  } else if (mode === 'web') {
+  } else if (mode === "web") {
     systemPrompt = `ROLE: "WebLambreta" - Senior Frontend & UX Specialist.
 CONTEXT: You are crafting high-conversion, visually stunning web experiences.
 FOCUS: Visual Impact, Animations (Framer Motion), SEO, Performance (Core Web Vitals), User Journey.
@@ -30,8 +42,8 @@ PROTOCOL:
 2. Ask for: Brand Vibe, Target Audience, Key Conversion Goals.
 3. Refine until you have a Design Specification.
 4. Output: [REQ_COMPLETE] <UX/UI Design Brief>`;
-  } else if (mode === 'agent') {
-    if (agentScope === 'personal') {
+  } else if (mode === "agent") {
+    if (agentScope === "personal") {
       systemPrompt = `ROLE: "AgentLambreta Life Partner" - Personal AI Assistant.
 CONTEXT: You are creating empathetic, helpful AI agents for personal growth and organization.
 FOCUS: Empathy, Daily Routine, Mental Health, Learning, Organization.
@@ -55,7 +67,7 @@ PROTOCOL:
   }
 
   const result = await streamText({
-    model: google('gemini-1.5-pro-latest'),
+    model: google("gemini-1.5-pro-latest"),
     system: systemPrompt,
     messages,
   });

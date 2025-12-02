@@ -5,84 +5,106 @@ import Image from "next/image";
 import { NexusTerminal } from "@/components/nexus-terminal";
 import { ParticlesBackground } from "@/components/ui/particles-background";
 import { ServicesSection } from "@/components/services-section";
+import { useTranslations } from "next-intl";
+import { LanguageSwitcher } from "@/components/language-switcher";
+import { ThemeToggle } from "@/components/theme-toggle";
+import { ScopeProvider, ScopeSwitcher, useScope } from "@/components/scope-provider";
+import { ContextInfoPanel } from "@/components/context-info-panel";
+import { ProjectRequestModal } from "@/components/project-request-modal";
+import { DynamicDescription } from "@/components/dynamic-description";
+import { Plus } from "lucide-react";
 
-type Mode = 'software' | 'web' | 'agent';
-type AgentScope = 'enterprise' | 'personal';
+type Mode = 'discovery' | 'software' | 'web' | 'agent';
 
 export default function Home() {
-  const [mode, setMode] = useState<Mode>('software');
-  const [agentScope, setAgentScope] = useState<AgentScope>('enterprise');
+  return (
+    <ScopeProvider>
+      <HomeContent />
+    </ScopeProvider>
+  );
+}
+
+function HomeContent() {
+  const t = useTranslations("Index");
+  const [mode, setMode] = useState<Mode>('discovery');
+  const { scope } = useScope();
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    // Contenedor Principal con fondo oscuro y centrado
-    <main className="flex min-h-screen flex-col items-center justify-center p-6 relative overflow-hidden selection:bg-zinc-800 selection:text-white">
+    <>
+    <main className="flex min-h-screen flex-col items-center justify-center p-6 relative overflow-hidden selection:bg-primary/20 selection:text-primary">
       
+      {/* Top Right Controls */}
+      <div className="absolute top-6 right-6 z-50 flex items-center gap-2">
+        <button
+          onClick={() => setIsModalOpen(true)}
+          className="hidden md:flex items-center gap-2 px-4 py-2 bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 border border-emerald-500/20 rounded-lg transition-all text-sm font-medium mr-2"
+        >
+          <Plus className="w-4 h-4" />
+          Start Project
+        </button>
+        <ScopeSwitcher />
+        <ThemeToggle />
+        <LanguageSwitcher />
+      </div>
+
       {/* Interactive Particles Background */}
-      <ParticlesBackground mode={mode} agentScope={agentScope} />
+      <ParticlesBackground mode={mode} agentScope={scope} />
 
-      {/* Fondo de Cuadrícula Sutil (Grid Pattern) */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-100 pointer-events-none" />
+      {/* Subtle Grid Background */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(128,128,128,0.1)_1px,transparent_1px),linear-gradient(to_bottom,rgba(128,128,128,0.1)_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
 
-      {/* Contenido Central (zIndex para estar sobre el fondo) */}
+      {/* Central Content */}
       <div className="relative z-10 flex flex-col items-center gap-8 max-w-4xl w-full py-12">
 
-        {/* ---> HEADER CON AVATAR CUCHO (Adaptado a PNG 694x631) <--- */}
+        {/* Header with Avatar */}
         <div className="flex flex-col md:flex-row items-center gap-6 text-center md:text-left">
-          {/*
-            Contenedor del Avatar:
-            Define un tamaño cuadrado fijo (w-24 h-24 en móvil, w-32 h-32 en escritorio).
-            'rounded-full' y 'overflow-hidden' crean el círculo perfecto.
-          */}
-          <div className="relative w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden shadow-xl shadow-zinc-900/50 border-2 border-zinc-800 group flex-shrink-0 bg-white">
+          <div className="relative w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden shadow-xl shadow-primary/20 border-2 border-border group flex-shrink-0 bg-card">
             <Image
-              // ⚠️ Nombre actualizado a .png
               src="/cuchoprofile.jpg"
               alt="CuchoLambreta AI Avatar"
-              // 'fill' hace que la imagen ocupe todo el contenedor cuadrado
               fill
-              // 'object-cover' es la CLAVE: adapta tus 694x631 al círculo sin deformar.
               className="object-cover transition-transform duration-700 group-hover:scale-110"
-              // Prioridad alta para carga instantánea
               priority
               sizes="(max-width: 768px) 96px, 128px"
             />
-            {/* Anillo de brillo sutil sobre la imagen */}
             <div className="absolute inset-0 rounded-full ring-1 ring-inset ring-white/10 pointer-events-none" />
           </div>
 
-          {/* Textos de Cabecera */}
+          {/* Header Text */}
           <div className="space-y-2">
-            <h1 className="text-4xl md:text-5xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-b from-white via-zinc-200 to-zinc-500">
-              CuchoLambreta Nexus
+            <h1 className="text-4xl md:text-5xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-b from-foreground via-foreground/80 to-muted-foreground">
+              {t('hero.title')}
             </h1>
-            <p className="text-lg text-zinc-400 max-w-xl leading-relaxed">
-              Operador del Ecosistema Enterprise. <br className="hidden md:block" />
-              Cuéntame tu idea, yo orquestaré la arquitectura.
+            <p className="text-lg text-muted-foreground max-w-xl leading-relaxed">
+              {t('hero.subtitle')}
             </p>
           </div>
         </div>
-        {/* ---> FIN HEADER <--- */}
 
-        {/* La Terminal Interactiva */}
+        {/* Nexus Terminal */}
         <div className="w-full mt-6">
           <NexusTerminal 
             mode={mode} 
             setMode={setMode} 
-            agentScope={agentScope}
-            setAgentScope={setAgentScope}
           />
         </div>
+
+        {/* Dynamic Description */}
+        <DynamicDescription mode={mode} scope={scope} />
 
         {/* Services Section */}
         <div className="w-full mt-32">
           <ServicesSection />
         </div>
 
-        {/* Footer simple */}
-        <footer className="absolute bottom-4 text-xs text-zinc-600 font-mono">
+        {/* Footer */}
+        <footer className="absolute bottom-4 text-xs text-muted-foreground font-mono">
           © {new Date().getFullYear()} CuchoLambreta Corp. Neural Systems.
         </footer>
       </div>
     </main>
+    <ProjectRequestModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+    </>
   );
 }

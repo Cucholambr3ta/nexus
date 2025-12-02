@@ -1,0 +1,24 @@
+
+> app@0.1.0 build
+> next build
+
+   Ôû▓ Next.js 16.0.6 (Turbopack)
+   - Environments: .env.local, .env
+
+ ÔÜá The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+   Creating an optimized production build ...
+ Ô£ô Compiled successfully in 26.0s
+   Running TypeScript ...
+Failed to compile.
+
+./src/components/nexus-terminal.tsx:241:40
+Type error: Property 'content' does not exist on type 'UIMessage<unknown, UIDataTypes, UITools>'.
+
+  239 |                 {messages.map((m) => {
+  240 |                   const isSystem = m.role !== "user";
+> 241 |                   const rawContent = m.content || "";
+      |                                        ^
+  242 |                   const content =
+  243 |                     typeof rawContent === "string"
+  244 |                       ? rawContent.split("[REQ_COMPLETE]")[0] || ""
+Next.js build worker exited with code: 1 and signal: null

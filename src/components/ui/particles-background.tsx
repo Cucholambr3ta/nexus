@@ -3,14 +3,17 @@
 import { useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
-import type { Container, Engine } from "@tsparticles/engine";
+import type { Engine } from "@tsparticles/engine";
 
 interface ParticlesBackgroundProps {
-  mode: 'software' | 'web' | 'agent';
-  agentScope?: 'enterprise' | 'personal';
+  mode: "discovery" | "software" | "web" | "agent";
+  agentScope?: "enterprise" | "personal";
 }
 
-export function ParticlesBackground({ mode, agentScope = 'enterprise' }: ParticlesBackgroundProps) {
+export function ParticlesBackground({
+  mode,
+  agentScope = "enterprise",
+}: ParticlesBackgroundProps) {
   const [init, setInit] = useState(false);
 
   // this should be run only once per application lifetime
@@ -24,11 +27,16 @@ export function ParticlesBackground({ mode, agentScope = 'enterprise' }: Particl
 
   const color = useMemo(() => {
     switch (mode) {
-      case 'software': return "#6366f1"; // Indigo
-      case 'web': return "#f43f5e";      // Rose
-      case 'agent': 
-        return agentScope === 'personal' ? "#d97706" : "#10b981"; // Amber (Personal) or Emerald (Enterprise)
-      default: return "#6366f1";
+      case "discovery":
+        return "#a1a1aa"; // Zinc-400
+      case "software":
+        return "#6366f1"; // Indigo
+      case "web":
+        return "#f43f5e"; // Rose
+      case "agent":
+        return agentScope === "personal" ? "#d97706" : "#10b981"; // Amber (Personal) or Emerald (Enterprise)
+      default:
+        return "#a1a1aa";
     }
   }, [mode, agentScope]);
 
@@ -39,7 +47,7 @@ export function ParticlesBackground({ mode, agentScope = 'enterprise' }: Particl
       <Particles
         id="tsparticles"
         // Key forces re-initialization when mode or scope changes
-        key={`${mode}-${agentScope}`} 
+        key={`${mode}-${agentScope}`}
         options={{
           fullScreen: { enable: false },
           fpsLimit: 120,
