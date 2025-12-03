@@ -3,7 +3,7 @@
 import { useLocale, useTranslations } from "next-intl";
 import { usePathname, useRouter } from "@/navigation";
 import { Globe, Check } from "lucide-react";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useTransition } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 
@@ -23,6 +23,8 @@ export function LanguageSwitcher() {
   const [isOpen, setIsOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
+  const [isPending, startTransition] = useTransition();
+
   // Close click outside
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -39,7 +41,9 @@ export function LanguageSwitcher() {
 
   const handleLanguageChange = (newLocale: string) => {
     setIsOpen(false);
-    router.replace(pathname, { locale: newLocale });
+    startTransition(() => {
+      router.replace(pathname, { locale: newLocale });
+    });
   };
 
   return (

@@ -2,117 +2,557 @@
   "Index": {
     "hero": {
       "title": "CuchoLambreta Nexus",
-      "subtitle": "The Global Digital Orchestration Council. Tell us your vision, we design the architecture."
+      "subtitle": "全球数字编排委员会。告诉我们您的愿景，我们设计架构。"
     },
     "terminal": {
       "placeholder": {
-        "discovery": "Describe your SaaS Platform or Complex System...",
-        "software": "Describe your SaaS Platform or Complex System...",
-        "web": "Describe your Corporate Site or Portfolio...",
-        "agent": "Describe the task you want to automate..."
+        "discovery": "描述您的SaaS平台或复杂系统...",
+        "software": "描述您的SaaS平台或复杂系统...",
+        "web": "描述您的企业网站或作品集...",
+        "agent": "描述您想要自动化的任务..."
       },
       "logs": {
-        "init": "Initializing Team Protocols...",
-        "analyzing": "The Council is analyzing...",
-        "handover": "Request Approved by The Council."
+        "init": "正在初始化团队协议...",
+        "analyzing": "委员会正在分析...",
+        "handover": "请求已获委员会批准。"
       },
       "modes": {
-        "discovery": "Discovery",
-        "software": "Software",
-        "web": "Web",
-        "agent": "Agent"
+        "discovery": "探索",
+        "software": "软件",
+        "web": "网络",
+        "agent": "代理"
       },
       "scopes": {
-        "enterprise": "Enterprise",
-        "personal": "Personal"
+        "enterprise": "企业",
+        "personal": "个人"
       }
     },
     "services": {
       "software": {
-        "title": "Software Architecture",
-        "subtitle": "Robust Systems.",
-        "description": "Scalable and secure systems built by our senior engineers."
+        "title": "软件架构",
+        "subtitle": "稳健的系统。",
+        "description": "由我们的高级工程师构建的可扩展且安全的系统。"
       },
       "web": {
-        "title": "Web Experience",
-        "subtitle": "Design that Converts.",
-        "description": "High-performance sites designed to convert."
+        "title": "网络体验",
+        "subtitle": "转化的设计。",
+        "description": "旨在转化的高性能网站。"
       },
       "agent": {
-        "title": "AI Workforce",
-        "subtitle": "Autonomous Agents 24/7.",
-        "description": "Autonomous agents that work while we sleep."
+        "title": "AI劳动力",
+        "subtitle": "全天候自主代理。",
+        "description": "在我们睡觉时工作的自主代理。"
       }
     },
     "team": {
-      "title": "The Council",
-      "subtitle": "A collective of experts united by excellence."
+      "title": "委员会",
+      "subtitle": "追求卓越的专家集体。"
     },
     "cta": {
-      "bookCall": "Book Strategy",
-      "start": "Start Protocol"
+      "bookCall": "预约策略",
+      "start": "启动协议"
     }
   },
   "ServicesPage": {
-    "back": "Back to Nexus",
-    "diagnosis": "The Diagnosis",
-    "diagnosisSubtitle": "Why the traditional approach is failing you.",
-    "painPoint": "Pain Point",
-    "solution": "Our Solution",
-    "oldWay": "Traditional Agencies",
+    "back": "返回 Nexus",
+    "diagnosis": "诊断",
+    "diagnosisSubtitle": "为什么传统方法让您失望。",
+    "painPoint": "痛点",
+    "solution": "我们的解决方案",
+    "oldWay": "传统代理机构",
     "newWay": "Cucho Lambreta",
-    "roadmap": "Execution Roadmap",
-    "deliverables": "Tangible Deliverables",
-    "guarantee": "100% Risk-Free Guarantee",
-    "faq": "Frequently Asked Questions",
-    "ready": "Ready to Start?",
-    "initProtocol": "Initialize Protocol"
+    "roadmap": "执行路线图",
+    "deliverables": "有形成果",
+    "guarantee": "100% 无风险保证",
+    "faq": "常见问题",
+    "ready": "准备好开始了吗？",
+    "initProtocol": "初始化协议"
   },
   "DynamicDescription": {
     "discovery": {
-      "personal": "Let our AI analyze your personal needs.",
-      "enterprise": "Our AI will assess your corporate requirements."
+      "personal": "让我们的AI分析您的个人需求。",
+      "enterprise": "我们的AI将评估您的企业需求。"
     },
     "software": {
-      "personal": "Build custom software for your ideas.",
-      "enterprise": "Develop scalable, enterprise-grade architectures."
+      "personal": "为您的想法构建定制软件。",
+      "enterprise": "开发可扩展的企业级架构。"
     },
     "web": {
-      "personal": "Create a stunning personal portfolio.",
-      "enterprise": "Design a high-converting corporate portal."
+      "personal": "创建一个令人惊叹的个人作品集。",
+      "enterprise": "设计高转化率的企业门户。"
     },
     "agent": {
-      "personal": "Deploy personal AI agents for daily tasks.",
-      "enterprise": "Integrate advanced AI workforce automation."
+      "personal": "部署个人AI代理以处理日常任务。",
+      "enterprise": "整合先进的AI劳动力自动化。"
     }
   },
   "ProjectRequestModal": {
-    "title": "Start a Project",
-    "subtitle": "Tell us about your vision.",
-    "successTitle": "Request Received",
-    "successMessage": "We'll be in touch shortly to discuss the details.",
+    "title": "开始项目",
+    "subtitle": "告诉我们您的愿景。",
+    "successTitle": "收到请求",
+    "successMessage": "我们将尽快与您联系讨论细节。",
     "fields": {
-      "name": "Name",
-      "email": "Email",
-      "company": "Company (Optional)",
-      "type": "Type",
-      "budget": "Budget",
-      "description": "Project Description"
+      "name": "姓名",
+      "email": "电子邮件",
+      "company": "公司（可选）",
+      "type": "类型",
+      "budget": "预算",
+      "description": "项目描述"
     },
     "placeholders": {
-      "name": "John Doe",
-      "email": "john@example.com",
-      "company": "Acme Inc.",
-      "budget": "e.g. $5k - $10k",
-      "description": "Describe your project goals and requirements..."
+      "name": "张三",
+      "email": "zhangsan@example.com",
+      "company": "某某公司",
+      "budget": "例如 $5k - $10k",
+      "description": "描述您的项目目标和要求..."
     },
     "options": {
-      "web": "Web Development",
-      "software": "Software Engineering",
-      "ai": "AI Integration",
-      "consulting": "Consulting"
+      "web": "网站开发",
+      "software": "软件工程",
+      "ai": "AI集成",
+      "consulting": "咨询"
     },
-    "submit": "Submit Request",
-    "sending": "Sending..."
+    "submit": "提交请求",
+    "sending": "发送中..."
+  },
+  "ServicesData": {
+    "software": {
+      "enterprise": {
+        "hero": {
+          "title": "军用级工程",
+          "subtitle": "用于大规模运营的关键任务系统",
+          "description": "我们设计稳健、可扩展且安全的软件生态系统。我们对遗留基础设施进行现代化改造，确保符合 ISO 27001 标准并实现 99.99% 的可用性。",
+          "cta": "安排架构审查",
+          "gradient": "from-blue-500 to-cyan-500"
+        },
+        "diagnosis": {
+          "title": "您的基础设施是否阻碍了您？",
+          "problems": [
+            "遗留系统产生技术债务。",
+            "安全漏洞和合规风险。",
+            "无法在负载高峰期进行水平扩展。",
+            "碎片化的数据孤岛阻碍了统一分析。"
+          ],
+          "painPoint": "技术债务",
+          "solution": "不可变微服务",
+          "comparison": [
+            {
+              "them": "临时补丁",
+              "us": "整体架构"
+            },
+            {
+              "them": "被动安全",
+              "us": "安全优先"
+            },
+            {
+              "them": "手动扩展",
+              "us": "原生自动扩展"
+            }
+          ]
+        },
+        "roadmap": {
+          "steps": [
+            {
+              "title": "审计与发现",
+              "description": "深入分析当前架构、安全态势和代码质量。"
+            },
+            {
+              "title": "战略迁移计划",
+              "description": "分阶段路线图，实现从单体到微服务的无停机过渡。"
+            },
+            {
+              "title": "核心实施",
+              "description": "开发高可用性后端服务和安全 API 网关。"
+            },
+            {
+              "title": "优化与交付",
+              "description": "性能调优、负载测试以及为内部团队提供的详尽文档。"
+            }
+          ]
+        },
+        "deliverables": [
+          "微服务蓝图",
+          "ISO 27001 合规报告",
+          "高可用性集群",
+          "迁移策略",
+          "自动化 CI/CD 管道"
+        ],
+        "guarantee": "我们保证在迁移过程中零数据丢失，吞吐量至少提高 20%，否则我们将免费继续优化。",
+        "faq": [
+          {
+            "question": "你们如何处理遗留数据迁移？",
+            "answer": "我们使用 'Strangler Fig' 模式逐步迁移功能，确保零停机时间并逐步验证数据完整性。"
+          },
+          {
+            "question": "你们能与我们的安全团队合作吗？",
+            "answer": "当然。我们与您的 SecOps 流程集成，以确保所有代码符合您的特定标准。"
+          }
+        ]
+      },
+      "personal": {
+        "hero": {
+          "title": "实现您的初创公司",
+          "subtitle": "从概念到市场只需几周，而不是几个月",
+          "description": "用可扩展且具有成本效益的 MVP 启动您的想法。我们优先考虑市场速度和核心功能，以便您获得牵引力和融资。",
+          "cta": "开始构建",
+          "gradient": "from-blue-500 to-cyan-500"
+        },
+        "diagnosis": {
+          "title": "难以启动？",
+          "problems": [
+            "被技术复杂性和分析瘫痪所淹没。",
+            "害怕构建用户不需要的功能。",
+            "预算有限，需要极高的效率。",
+            "开发周期缓慢，错失市场窗口。"
+          ],
+          "painPoint": "缓慢的代理机构",
+          "solution": "几周内完成 MVP",
+          "comparison": [
+            {
+              "them": "过度工程",
+              "us": "专注于核心价值"
+            },
+            {
+              "them": "开发缓慢",
+              "us": "快速迭代"
+            },
+            {
+              "them": "初始成本高",
+              "us": "具有成本效益"
+            }
+          ]
+        },
+        "roadmap": {
+          "steps": [
+            {
+              "title": "概念验证",
+              "description": "将您的想法提炼为专注于价值的精益技术规范。"
+            },
+            {
+              "title": "快速原型设计",
+              "description": "构建功能原型以测试用户流程和初步反馈。"
+            },
+            {
+              "title": "MVP 开发",
+              "description": "使用云原生技术敏捷开发生产就绪的 MVP。"
+            },
+            {
+              "title": "发布与迭代",
+              "description": "部署到生产环境并设置分析以衡量行为。"
+            }
+          ]
+        },
+        "deliverables": [
+          "功能齐全的 MVP",
+          "可扩展的云架构",
+          "移动响应式 UI",
+          "管理仪表板",
+          "分析集成"
+        ],
+        "guarantee": "我们在约定的时间和预算内交付功能性 MVP。如果我们失败了，我们将免费工作直到上线。",
+        "faq": [
+          {
+            "question": "你们使用什么技术栈？",
+            "answer": "我们选择最好的工具，通常是像 React、Node.js 和 Supabase 这样的现代堆栈，以实现快速开发和可扩展性。"
+          },
+          {
+            "question": "我以后可以扩展吗？",
+            "answer": "可以。我们在构建时就考虑到了扩展性，使用模块化代码和随用户群增长的云基础设施。"
+          }
+        ]
+      }
+    },
+    "web": {
+      "enterprise": {
+        "hero": {
+          "title": "装甲企业形象",
+          "subtitle": "全球范围内的主导品牌影响力",
+          "description": "我们构建企业级网络平台，树立品牌权威并在全球范围内提供超快体验。使用先进的设计系统和边缘网络 CDN。",
+          "cta": "提升您的品牌",
+          "gradient": "from-purple-500 to-pink-500"
+        },
+        "diagnosis": {
+          "title": "您的数字存在是否碎片化？",
+          "problems": [
+            "区域站点上的品牌表现不一致。",
+            "加载缓慢损害 SEO 和用户留存。",
+            "难以管理全球内容更新。",
+            "缺乏无障碍合规性 (WCAG) 暴露法律风险。"
+          ],
+          "painPoint": "网站缓慢损害品牌",
+          "solution": "全球设计系统",
+          "comparison": [
+            {
+              "them": "UI 不一致",
+              "us": "像素级一致性"
+            },
+            {
+              "them": "性能缓慢",
+              "us": "边缘网络速度"
+            },
+            {
+              "them": "难以管理",
+              "us": "无头 CMS"
+            }
+          ]
+        },
+        "roadmap": {
+          "steps": [
+            {
+              "title": "全球审计",
+              "description": "审查当前的 Web 状态、性能指标和品牌一致性。"
+            },
+            {
+              "title": "设计系统创建",
+              "description": "开发统一的组件库以确保品牌完整性。"
+            },
+            {
+              "title": "平台工程",
+              "description": "构建具有全球 CDN 分发的无头 CMS 架构。"
+            },
+            {
+              "title": "推出与培训",
+              "description": "分阶段推出区域站点并培训内容团队。"
+            }
+          ]
+        },
+        "deliverables": [
+          "全球设计系统",
+          "无头 CMS 集成",
+          "全球 CDN 配置",
+          "WCAG 2.1 AA 合规",
+          "高级分析仪表板"
+        ],
+        "guarantee": "我们保证 Google Lighthouse 得分 90+ 并完全符合 WCAG，确保您的品牌引领市场。",
+        "faq": [
+          {
+            "question": "你们如何处理多语言支持？",
+            "answer": "我们实施与 CMS 深度集成的强大国际化 (i18n) 框架。"
+          },
+          {
+            "question": "它会与我们的 CRM 集成吗？",
+            "answer": "是的，我们构建定制连接器，将用户和潜在客户数据直接同步到 Salesforce、HubSpot 等。"
+          }
+        ]
+      },
+      "personal": {
+        "hero": {
+          "title": "您的作品集，您的遗产",
+          "subtitle": "引人注目的视觉识别",
+          "description": "凭借令人惊叹的高性能作品集网站在饱和的市场中脱颖而出。我们专注于视觉冲击力和讲故事，以提升您的个人品牌。",
+          "cta": "建立我的品牌",
+          "gradient": "from-purple-500 to-pink-500"
+        },
+        "diagnosis": {
+          "title": "您在网上是隐形的吗？",
+          "problems": [
+            "无法打动任何人的通用模板。",
+            "作品集未能有效展示您的最佳作品。",
+            "访客转化率低。",
+            "没有技术帮助难以更新内容。"
+          ],
+          "painPoint": "隐形",
+          "solution": "即时视觉冲击",
+          "comparison": [
+            {
+              "them": "通用模板",
+              "us": "定制设计"
+            },
+            {
+              "them": "静态内容",
+              "us": "动态讲故事"
+            },
+            {
+              "them": "低影响力",
+              "us": "高转化率"
+            }
+          ]
+        },
+        "roadmap": {
+          "steps": [
+            {
+              "title": "品牌发现",
+              "description": "定义您的独特价值主张和视觉识别。"
+            },
+            {
+              "title": "视觉设计",
+              "description": "创建捕捉您个性和专业精神的高保真模型。"
+            },
+            {
+              "title": "开发",
+              "description": "编写像素完美、响应迅速且具有流畅动画的网站。"
+            },
+            {
+              "title": "内容策略",
+              "description": "优化您的文案和案例研究以获得最大影响力。"
+            }
+          ]
+        },
+        "deliverables": [
+          "定制作品集网站",
+          "视觉识别套件",
+          "易于更新的 CMS",
+          "SEO 优化",
+          "社交媒体集成"
+        ],
+        "guarantee": "您会爱上您的新网站。我们提供无限的设计修改，直到您 100% 满意。",
+        "faq": [
+          {
+            "question": "我需要懂编程吗？",
+            "answer": "完全不需要。我们提供易于使用的 CMS，以便您随时更新文本和图像。"
+          },
+          {
+            "question": "这需要多长时间？",
+            "answer": "通常我们在 2-4 周内推出具有高影响力的个人网站。"
+          }
+        ]
+      }
+    },
+    "agent": {
+      "enterprise": {
+        "hero": {
+          "title": "生产力革命",
+          "subtitle": "自动化运营以获得巨大投资回报",
+          "description": "部署 24/7 运行的智能 AI 代理，以优化工作流程、分析大数据并提高效率。集成到您的堆栈中的安全、私有解决方案。",
+          "cta": "自动化企业",
+          "gradient": "from-emerald-500 to-green-500"
+        },
+        "diagnosis": {
+          "title": "淹没在运营低效中？",
+          "problems": [
+            "重复性手动任务导致高运营成本。",
+            "响应时间慢影响客户满意度。",
+            "无法从大量数据中获取见解。",
+            "关键工作流程中存在人为错误的风险。"
+          ],
+          "painPoint": "高运营成本",
+          "solution": "24/7 自主劳动力",
+          "comparison": [
+            {
+              "them": "体力劳动",
+              "us": "AI 劳动力"
+            },
+            {
+              "them": "被动支持",
+              "us": "主动代理"
+            },
+            {
+              "them": "数据孤岛",
+              "us": "可操作的见解"
+            }
+          ]
+        },
+        "roadmap": {
+          "steps": [
+            {
+              "title": "工作流分析",
+              "description": "识别运营中自动化的高价值目标。"
+            },
+            {
+              "title": "代理架构",
+              "description": "设计针对特定业务功能量身定制的安全 AI 代理。"
+            },
+            {
+              "title": "集成与训练",
+              "description": "将代理连接到您的数据湖和 API，并微调模型。"
+            },
+            {
+              "title": "部署与监控",
+              "description": "推出具有全面监督和性能跟踪的代理。"
+            }
+          ]
+        },
+        "deliverables": [
+          "定制 AI 代理套件",
+          "私有 LLM 部署",
+          "实时分析仪表板",
+          "24/7 运营正常运行时间",
+          "ROI 影响报告"
+        ],
+        "guarantee": "我们保证第一季度自动化工作流程的处理时间至少减少 30%。",
+        "faq": [
+          {
+            "question": "我们的数据安全吗？",
+            "answer": "是的。我们在您的安全基础设施内部署 AI 模型的私有实例。"
+          },
+          {
+            "question": "代理可以做出复杂的决定吗？",
+            "answer": "我们的代理拥有“人机交互”协议，以便在置信度较低时升级给人类专家。"
+          }
+        ]
+      },
+      "personal": {
+        "hero": {
+          "title": "夺回您的时间",
+          "subtitle": "您的个人数字管家",
+          "description": "想象一下，平凡的任务可以自行处理的生活。我们的个人代理管理日程、电子邮件和研究，还您自由。",
+          "cta": "获取助手",
+          "gradient": "from-emerald-500 to-green-500"
+        },
+        "diagnosis": {
+          "title": "感到不知所措？",
+          "problems": [
+            "不断的上下文切换扼杀了您的生产力。",
+            "收件箱总是爆满。",
+            "错过重要的约会或截止日期。",
+            "零时间用于个人成长或放松。"
+          ],
+          "painPoint": "重复性任务导致的倦怠",
+          "solution": "个人数字助手",
+          "comparison": [
+            {
+              "them": "无组织的混乱",
+              "us": "自动化秩序"
+            },
+            {
+              "them": "错失良机",
+              "us": "完美时机"
+            },
+            {
+              "them": "倦怠",
+              "us": "内心平静"
+            }
+          ]
+        },
+        "roadmap": {
+          "steps": [
+            {
+              "title": "生活方式评估",
+              "description": "了解您的日常摩擦点和自动化需求。"
+            },
+            {
+              "title": "代理配置",
+              "description": "设置您的个人 AI，使其可以访问您的日历和工具。"
+            },
+            {
+              "title": "自动化设置",
+              "description": "创建用于电子邮件过滤、日程安排和信息检索的工作流程。"
+            },
+            {
+              "title": "入职",
+              "description": "教您如何有效地与您的新数字助手互动。"
+            }
+          ]
+        },
+        "deliverables": [
+          "个性化 AI 助手",
+          "电子邮件和日历集成",
+          "自动研究工具",
+          "每日简报系统",
+          "移动访问应用程序"
+        ],
+        "guarantee": "如果您在第一个月每周没有节省至少 10 小时，我们将退还设置费。",
+        "faq": [
+          {
+            "question": "设置难吗？",
+            "answer": "不，我们处理所有技术配置。您只需连接您的帐户并开始聊天。"
+          },
+          {
+            "question": "我的隐私呢？",
+            "answer": "您的个人代理配置了严格的隐私控制。我们不出售或共享您的数据。"
+          }
+        ]
+      }
+    }
   }
 }

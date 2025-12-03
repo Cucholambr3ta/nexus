@@ -1,6 +1,6 @@
 "use client";
 
-import { ServiceGroup, ServiceMode } from "@/lib/services-data";
+import { ServiceMode } from "@/lib/services-data";
 import { useScope } from "@/components/scope-provider";
 import { motion, useScroll, useTransform } from "framer-motion";
 import {
@@ -9,21 +9,43 @@ import {
   XCircle,
   ShieldCheck,
   ArrowRight,
-  Minus,
 } from "lucide-react";
 import Link from "next/link";
 import NextImage from "next/image";
 import { useRef } from "react";
 import { ParticlesBackground } from "@/components/ui/particles-background";
+import { useTranslations } from "next-intl";
 
 interface ServiceContentProps {
   mode: ServiceMode;
-  data: ServiceGroup;
+  image: string;
 }
 
-export function ServiceContent({ mode, data: fullData }: ServiceContentProps) {
+export function ServiceContent({ mode, image }: ServiceContentProps) {
   const { scope } = useScope();
-  const data = fullData[scope];
+  const t = useTranslations(`ServicesData.${mode}.${scope}`);
+  const tPage = useTranslations("ServicesPage"); // Assuming some general keys might be here or just hardcoded English in original file?
+  // The original file had hardcoded English for "The Diagnosis", "Pain Point", etc.
+  // I should probably use translations for those too if I want full i18n.
+  // But for now, I will focus on the dynamic content from ServicesData.
+  // Actually, I should check if I added those static strings to en.json/es.json.
+  // In ServiceView I used "ServicesPage" namespace for "diagnosisSubtitle", "painPoint", etc.
+  // I should check if I can reuse them or if I should add them.
+  // The original ServiceContent has "The Diagnosis", "Why the traditional approach is failing you.", "Pain Point", "Our Solution", "Traditional Agencies", "Cucho Lambreta", "Execution Roadmap", "Tangible Deliverables", "100% Risk-Free Guarantee", "Ready to Start?", "Initiate the ... protocol...".
+
+  // I will use the keys I added to ServicesPage if they match, or hardcode them if they are not there (but better to add them).
+  // Let's check what I have in ServicesPage in es.json/en.json.
+  // "diagnosisSubtitle": "Por qué el enfoque tradicional te está fallando.",
+  // "painPoint": "Punto de Dolor",
+  // "solution": "Nuestra Solución",
+  // "roadmap": "Roadmap de Ejecución",
+  // "deliverables": "Entregables Tangibles",
+  // "guarantee": "Garantía 100% Libre de Riesgo",
+  // "ready": "¿Listo para Empezar?",
+  // "initProtocol": "Iniciar Protocolo"
+
+  // So I can use these.
+
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -33,6 +55,12 @@ export function ServiceContent({ mode, data: fullData }: ServiceContentProps) {
   const opacity = useTransform(scrollYProgress, [0, 0.1], [1, 0]);
   const scale = useTransform(scrollYProgress, [0, 0.1], [1, 0.9]);
 
+  // Helper for arrays
+  const problems = t.raw('diagnosis.problems') as string[];
+  const comparison = t.raw('diagnosis.comparison') as { them: string; us: string }[];
+  const steps = t.raw('roadmap.steps') as { title: string; description: string }[];
+  const deliverables = t.raw('deliverables') as string[];
+
   return (
     <div
       ref={containerRef}
@@ -40,7 +68,6 @@ export function ServiceContent({ mode, data: fullData }: ServiceContentProps) {
     >
       <ParticlesBackground mode={mode} />
 
-      {/* --- 1. HERO SECTION (Immersive) --- */}
       {/* --- 1. HERO SECTION (Split Hero) --- */}
       <section className="relative min-h-[80vh] flex items-center justify-center px-6 z-10 pt-20">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -62,21 +89,21 @@ export function ServiceContent({ mode, data: fullData }: ServiceContentProps) {
               className={`inline-flex items-center gap-2 px-3 py-1 rounded-full border border-zinc-800 bg-zinc-900/50 backdrop-blur-sm text-xs font-mono uppercase tracking-wider mb-6 text-zinc-400`}
             >
               <span
-                className={`w-2 h-2 rounded-full bg-gradient-to-r ${data.hero.gradient}`}
+                className={`w-2 h-2 rounded-full bg-gradient-to-r ${t('hero.gradient')}`}
               ></span>
               {mode.toUpperCase()} PROTOCOL
             </div>
 
             <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-6 leading-[1.1]">
               <span
-                className={`bg-clip-text text-transparent bg-gradient-to-b ${data.hero.gradient} from-white to-zinc-500`}
+                className={`bg-clip-text text-transparent bg-gradient-to-b ${t('hero.gradient')} from-white to-zinc-500`}
               >
-                {data.hero.title}
+                {t('hero.title')}
               </span>
             </h1>
 
             <p className="text-xl text-zinc-400 max-w-xl leading-relaxed mb-8">
-              {data.hero.subtitle}
+              {t('hero.subtitle')}
             </p>
 
             <Link href={`/?mode=${mode}`}>
@@ -84,11 +111,11 @@ export function ServiceContent({ mode, data: fullData }: ServiceContentProps) {
                 className={`group relative px-8 py-4 rounded-full text-base font-bold bg-white text-black hover:scale-105 transition-all shadow-[0_0_20px_rgba(255,255,255,0.2)] flex items-center gap-2 overflow-hidden`}
               >
                 <span className="relative z-10 flex items-center gap-2">
-                  {data.hero.cta}
+                  {t('hero.cta')}
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </span>
                 <div
-                  className={`absolute inset-0 bg-gradient-to-r ${data.hero.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
+                  className={`absolute inset-0 bg-gradient-to-r ${t('hero.gradient')} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
                 ></div>
               </button>
             </Link>
@@ -103,7 +130,7 @@ export function ServiceContent({ mode, data: fullData }: ServiceContentProps) {
           >
             {/* Glow Effect */}
             <div
-              className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] rounded-full blur-3xl opacity-20 bg-gradient-to-r ${data.hero.gradient} -z-10`}
+              className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] rounded-full blur-3xl opacity-20 bg-gradient-to-r ${t('hero.gradient')} -z-10`}
             ></div>
 
             {/* Floating Image */}
@@ -116,16 +143,16 @@ export function ServiceContent({ mode, data: fullData }: ServiceContentProps) {
               }}
               className="relative w-full max-w-md aspect-square"
             >
-               {/* Using next/image for optimization */}
-               <div className="relative w-full h-full">
-                 <NextImage
-                    src={fullData.image} 
-                    alt={data.hero.title}
-                    fill
-                    className="object-contain drop-shadow-2xl"
-                    priority
-                 />
-               </div>
+              {/* Using next/image for optimization */}
+              <div className="relative w-full h-full">
+                <NextImage
+                  src={image}
+                  alt={t('hero.title')}
+                  fill
+                  className="object-contain drop-shadow-2xl"
+                  priority
+                />
+              </div>
             </motion.div>
           </motion.div>
         </div>
@@ -147,10 +174,10 @@ export function ServiceContent({ mode, data: fullData }: ServiceContentProps) {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              The Diagnosis
+              {t('diagnosis.title')}
             </h2>
             <p className="text-zinc-400 text-lg">
-              Why the traditional approach is failing you.
+              {tPage('diagnosisSubtitle')}
             </p>
           </div>
 
@@ -163,10 +190,10 @@ export function ServiceContent({ mode, data: fullData }: ServiceContentProps) {
               className="bg-red-500/5 border border-red-500/10 p-8 rounded-2xl backdrop-blur-sm"
             >
               <h3 className="text-red-400 font-mono text-sm uppercase tracking-wider mb-2">
-                Pain Point
+                {tPage('painPoint')}
               </h3>
               <p className="text-2xl font-bold text-red-100">
-                {data.diagnosis.painPoint}
+                {t('diagnosis.painPoint')}
               </p>
             </motion.div>
             <motion.div
@@ -176,10 +203,10 @@ export function ServiceContent({ mode, data: fullData }: ServiceContentProps) {
               className="bg-emerald-500/5 border border-emerald-500/10 p-8 rounded-2xl backdrop-blur-sm"
             >
               <h3 className="text-emerald-400 font-mono text-sm uppercase tracking-wider mb-2">
-                Our Solution
+                {tPage('solution')}
               </h3>
               <p className="text-2xl font-bold text-emerald-100">
-                {data.diagnosis.solution}
+                {t('diagnosis.solution')}
               </p>
             </motion.div>
           </div>
@@ -202,7 +229,7 @@ export function ServiceContent({ mode, data: fullData }: ServiceContentProps) {
                 Cucho Lambreta
               </div>
             </div>
-            {data.diagnosis.comparison.map((item, idx) => (
+            {comparison.map((item, idx) => (
               <div
                 key={idx}
                 className="grid grid-cols-2 border-b border-zinc-800/50 last:border-0 group"
@@ -227,18 +254,18 @@ export function ServiceContent({ mode, data: fullData }: ServiceContentProps) {
       <section className="py-32 px-6 bg-zinc-900/20 border-y border-zinc-800/50 z-10 relative overflow-hidden">
         <div className="max-w-3xl mx-auto relative">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-20">
-            Execution Roadmap
+            {tPage('roadmap')}
           </h2>
 
           {/* Vertical Line */}
           <div className="absolute left-[15px] md:left-1/2 top-32 bottom-0 w-px bg-zinc-800 -translate-x-1/2"></div>
           <motion.div
             style={{ scaleY: scrollYProgress }}
-            className={`absolute left-[15px] md:left-1/2 top-32 bottom-0 w-px bg-gradient-to-b ${data.hero.gradient} -translate-x-1/2 origin-top`}
+            className={`absolute left-[15px] md:left-1/2 top-32 bottom-0 w-px bg-gradient-to-b ${t('hero.gradient')} -translate-x-1/2 origin-top`}
           ></motion.div>
 
           <div className="space-y-24 relative">
-            {data.roadmap.steps.map((step, idx) => (
+            {steps.map((step, idx) => (
               <motion.div
                 key={idx}
                 initial={{ opacity: 0, y: 50 }}
@@ -268,7 +295,7 @@ export function ServiceContent({ mode, data: fullData }: ServiceContentProps) {
                 {/* Node */}
                 <div className="absolute left-0 md:left-1/2 -translate-x-[2px] md:-translate-x-1/2 w-8 h-8 rounded-full bg-zinc-950 border-2 border-zinc-800 flex items-center justify-center z-10 shadow-[0_0_20px_rgba(0,0,0,1)]">
                   <div
-                    className={`w-3 h-3 rounded-full bg-gradient-to-r ${data.hero.gradient}`}
+                    className={`w-3 h-3 rounded-full bg-gradient-to-r ${t('hero.gradient')}`}
                   ></div>
                 </div>
 
@@ -291,10 +318,10 @@ export function ServiceContent({ mode, data: fullData }: ServiceContentProps) {
       {/* --- 4. DELIVERABLES (Grid) --- */}
       <section className="py-32 px-6 max-w-6xl mx-auto z-10 relative">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
-          Tangible Deliverables
+          {tPage('deliverables')}
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          {data.deliverables.map((item, idx) => (
+          {deliverables.map((item, idx) => (
             <motion.div
               key={idx}
               initial={{ opacity: 0, scale: 0.9 }}
@@ -325,10 +352,10 @@ export function ServiceContent({ mode, data: fullData }: ServiceContentProps) {
           </div>
           <div>
             <h3 className="text-xl font-bold text-amber-100 mb-2">
-              100% Risk-Free Guarantee
+              {tPage('guarantee')}
             </h3>
             <p className="text-amber-200/80 text-lg leading-relaxed">
-              {data.guarantee}
+              {t('guarantee')}
             </p>
           </div>
         </motion.div>
@@ -343,7 +370,7 @@ export function ServiceContent({ mode, data: fullData }: ServiceContentProps) {
           className="max-w-3xl mx-auto"
         >
           <h2 className="text-4xl md:text-6xl font-bold mb-8 tracking-tighter">
-            Ready to Start?
+            {tPage('ready')}
           </h2>
           <p className="text-xl text-zinc-400 mb-12">
             Initiate the {mode} protocol in the terminal to begin your
@@ -355,11 +382,11 @@ export function ServiceContent({ mode, data: fullData }: ServiceContentProps) {
               className={`group relative px-10 py-5 rounded-full text-lg font-bold bg-white text-black hover:scale-105 transition-all shadow-[0_0_40px_rgba(255,255,255,0.3)] flex items-center gap-3 mx-auto overflow-hidden`}
             >
               <span className="relative z-10 flex items-center gap-2">
-                Initialize Protocol{" "}
+                {tPage('initProtocol')}{" "}
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </span>
               <div
-                className={`absolute inset-0 bg-gradient-to-r ${data.hero.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
+                className={`absolute inset-0 bg-gradient-to-r ${t('hero.gradient')} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
               ></div>
             </button>
           </Link>

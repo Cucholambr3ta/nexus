@@ -114,5 +114,445 @@
     },
     "submit": "Submit Request",
     "sending": "Sending..."
+  },
+  "ServicesData": {
+    "software": {
+      "enterprise": {
+        "hero": {
+          "title": "Military Grade Engineering",
+          "subtitle": "Mission Critical Systems for High Scale Operations",
+          "description": "We design robust, scalable, and secure software ecosystems. We modernize legacy infrastructure ensuring ISO 27001 compliance and 99.99% availability.",
+          "cta": "Schedule Architecture Review",
+          "gradient": "from-blue-500 to-cyan-500"
+        },
+        "diagnosis": {
+          "title": "Is Your Infrastructure Holding You Back?",
+          "problems": [
+            "Legacy systems generating technical debt.",
+            "Security vulnerabilities and compliance risk.",
+            "Inability to scale horizontally during load peaks.",
+            "Fragmented data silos preventing unified analytics."
+          ],
+          "painPoint": "Technical Debt",
+          "solution": "Immutable Microservices",
+          "comparison": [
+            {
+              "them": "Temporary Patches",
+              "us": "Holistic Architecture"
+            },
+            {
+              "them": "Reactive Security",
+              "us": "Security First"
+            },
+            {
+              "them": "Manual Scaling",
+              "us": "Native Auto-Scaling"
+            }
+          ]
+        },
+        "roadmap": {
+          "steps": [
+            {
+              "title": "Audit and Discovery",
+              "description": "Deep analysis of current architecture, security posture, and code quality."
+            },
+            {
+              "title": "Strategic Migration Plan",
+              "description": "Phased roadmap to transition from monoliths to microservices without downtime."
+            },
+            {
+              "title": "Core Implementation",
+              "description": "Development of high-availability backend services and secure API gateways."
+            },
+            {
+              "title": "Optimization and Delivery",
+              "description": "Performance tuning, load testing, and exhaustive documentation for internal teams."
+            }
+          ]
+        },
+        "deliverables": [
+          "Microservices Blueprint",
+          "ISO 27001 Compliance Report",
+          "High Availability Cluster",
+          "Migration Strategy",
+          "Automated CI/CD Pipelines"
+        ],
+        "guarantee": "We guarantee zero data loss during migration and a minimum 20% improvement in throughput, or we continue optimizing at no cost.",
+        "faq": [
+          {
+            "question": "How do you handle legacy data migration?",
+            "answer": "We use the 'Strangler Fig' pattern to migrate functionality incrementally, ensuring zero downtime and step-by-step data integrity verification."
+          },
+          {
+            "question": "Can you work with our security team?",
+            "answer": "Absolutely. We integrate with your SecOps processes to ensure all code meets your specific standards."
+          }
+        ]
+      },
+      "personal": {
+        "hero": {
+          "title": "Materialize Your Startup",
+          "subtitle": "From Concept to Market in Weeks, Not Months",
+          "description": "Launch your idea with a scalable and cost-effective MVP. We prioritize market speed and core functionality so you can gain traction and funding.",
+          "cta": "Start Building",
+          "gradient": "from-blue-500 to-cyan-500"
+        },
+        "diagnosis": {
+          "title": "Struggling to Launch?",
+          "problems": [
+            "Overwhelmed by technical complexity and analysis paralysis.",
+            "Fear of building features users don't want.",
+            "Limited budget requiring extreme efficiency.",
+            "Slow development cycles missing market windows."
+          ],
+          "painPoint": "Slow Agencies",
+          "solution": "MVP in Weeks",
+          "comparison": [
+            {
+              "them": "Over-Engineering",
+              "us": "Focus on Core Value"
+            },
+            {
+              "them": "Slow Development",
+              "us": "Rapid Iteration"
+            },
+            {
+              "them": "High Initial Cost",
+              "us": "Cost-Effective"
+            }
+          ]
+        },
+        "roadmap": {
+          "steps": [
+            {
+              "title": "Concept Validation",
+              "description": "Refining your idea into a lean technical specification focused on value."
+            },
+            {
+              "title": "Rapid Prototyping",
+              "description": "Building a functional prototype to test user flows and initial feedback."
+            },
+            {
+              "title": "MVP Development",
+              "description": "Agile development of production-ready MVP using cloud-native technology."
+            },
+            {
+              "title": "Launch and Iteration",
+              "description": "Deployment to production and analytics setup to measure behavior."
+            }
+          ]
+        },
+        "deliverables": [
+          "Fully Functional MVP",
+          "Scalable Cloud Architecture",
+          "Mobile-Responsive UI",
+          "Admin Dashboard",
+          "Analytics Integration"
+        ],
+        "guarantee": "We deliver a functional MVP within the agreed time and budget. If we fail, we work for free until it's live.",
+        "faq": [
+          {
+            "question": "What tech stack do you use?",
+            "answer": "We choose the best tool, typically modern stacks like React, Node.js, and Supabase for rapid development and scalability."
+          },
+          {
+            "question": "Can I scale this later?",
+            "answer": "Yes. We build with scale in mind, using modular code and cloud infrastructure that grows with your user base."
+          }
+        ]
+      }
+    },
+    "web": {
+      "enterprise": {
+        "hero": {
+          "title": "Armored Corporate Identity",
+          "subtitle": "Dominant Brand Presence at Global Scale",
+          "description": "We build enterprise-grade web platforms that command brand authority and deliver ultra-fast experiences globally. Using advanced design systems and edge-network CDNs.",
+          "cta": "Elevate Your Brand",
+          "gradient": "from-purple-500 to-pink-500"
+        },
+        "diagnosis": {
+          "title": "Is Your Digital Presence Fragmented?",
+          "problems": [
+            "Inconsistent brand representation across regional sites.",
+            "Slow loads damaging SEO and user retention.",
+            "Difficulty managing global content updates.",
+            "Lack of accessibility compliance (WCAG) exposing legal risk."
+          ],
+          "painPoint": "Slow sites damage brand",
+          "solution": "Global Design Systems",
+          "comparison": [
+            {
+              "them": "Inconsistent UI",
+              "us": "Pixel-Perfect Consistency"
+            },
+            {
+              "them": "Slow Performance",
+              "us": "Edge-Network Speed"
+            },
+            {
+              "them": "Hard to Manage",
+              "us": "Headless CMS"
+            }
+          ]
+        },
+        "roadmap": {
+          "steps": [
+            {
+              "title": "Global Audit",
+              "description": "Review of current web state, performance metrics, and brand consistency."
+            },
+            {
+              "title": "Design System Creation",
+              "description": "Development of unified component library to ensure brand integrity."
+            },
+            {
+              "title": "Platform Engineering",
+              "description": "Construction of Headless CMS architecture with global CDN distribution."
+            },
+            {
+              "title": "Rollout and Training",
+              "description": "Phased launch of regional sites and training for content teams."
+            }
+          ]
+        },
+        "deliverables": [
+          "Global Design System",
+          "Headless CMS Integration",
+          "Global CDN Configuration",
+          "WCAG 2.1 AA Compliance",
+          "Advanced Analytics Dashboard"
+        ],
+        "guarantee": "We guarantee a Google Lighthouse score of 90+ and full WCAG compliance, ensuring your brand leads the market.",
+        "faq": [
+          {
+            "question": "How do you handle multi-language support?",
+            "answer": "We implement robust internationalization (i18n) frameworks deeply integrated with the CMS."
+          },
+          {
+            "question": "Will it integrate with our CRM?",
+            "answer": "Yes, we build custom connectors to sync user and lead data directly to Salesforce, HubSpot, etc."
+          }
+        ]
+      },
+      "personal": {
+        "hero": {
+          "title": "Your Portfolio, Your Legacy",
+          "subtitle": "Visual Identity That Commands Attention",
+          "description": "Stand out in a saturated market with a stunning, high-performance portfolio site. We focus on visual impact and storytelling to elevate your personal brand.",
+          "cta": "Build My Brand",
+          "gradient": "from-purple-500 to-pink-500"
+        },
+        "diagnosis": {
+          "title": "Are You Invisible Online?",
+          "problems": [
+            "Generic templates that impress no one.",
+            "Portfolio not showcasing your best work effectively.",
+            "Low visitor conversion rates.",
+            "Difficulty updating content without technical help."
+          ],
+          "painPoint": "Being invisible",
+          "solution": "Immediate Visual Impact",
+          "comparison": [
+            {
+              "them": "Generic Templates",
+              "us": "Bespoke Design"
+            },
+            {
+              "them": "Static Content",
+              "us": "Dynamic Storytelling"
+            },
+            {
+              "them": "Low Impact",
+              "us": "High Conversion"
+            }
+          ]
+        },
+        "roadmap": {
+          "steps": [
+            {
+              "title": "Brand Discovery",
+              "description": "Definition of your unique value proposition and visual identity."
+            },
+            {
+              "title": "Visual Design",
+              "description": "Creation of high-fidelity mockups capturing your personality and professionalism."
+            },
+            {
+              "title": "Development",
+              "description": "Coding a pixel-perfect, responsive site with fluid animations."
+            },
+            {
+              "title": "Content Strategy",
+              "description": "Optimization of your copy and case studies for maximum impact."
+            }
+          ]
+        },
+        "deliverables": [
+          "Custom Portfolio Website",
+          "Visual Identity Kit",
+          "CMS for Easy Updates",
+          "SEO Optimization",
+          "Social Media Integration"
+        ],
+        "guarantee": "You'll love your new site. We offer unlimited design revisions until you are 100% satisfied.",
+        "faq": [
+          {
+            "question": "Do I need to know how to code?",
+            "answer": "Not at all. We provide an easy-to-use CMS so you can update text and images whenever you want."
+          },
+          {
+            "question": "How long does it take?",
+            "answer": "Typically we launch a high-impact personal site in 2-4 weeks."
+          }
+        ]
+      }
+    },
+    "agent": {
+      "enterprise": {
+        "hero": {
+          "title": "Productivity Revolution",
+          "subtitle": "Automating Operations for Massive ROI",
+          "description": "Deploy intelligent AI agents operating 24/7 to optimize workflows, analyze big data, and drive efficiency. Secure, private solutions that integrate into your stack.",
+          "cta": "Automate Enterprise",
+          "gradient": "from-emerald-500 to-green-500"
+        },
+        "diagnosis": {
+          "title": "Drowning in Operational Inefficiency?",
+          "problems": [
+            "High operational costs due to repetitive manual tasks.",
+            "Slow response times affecting customer satisfaction.",
+            "Inability to derive insights from large data volumes.",
+            "Risks of human error in critical workflows."
+          ],
+          "painPoint": "High operational costs",
+          "solution": "24/7 Autonomous Workforce",
+          "comparison": [
+            {
+              "them": "Manual Labor",
+              "us": "AI Workforce"
+            },
+            {
+              "them": "Reactive Support",
+              "us": "Proactive Agents"
+            },
+            {
+              "them": "Data Silos",
+              "us": "Actionable Insights"
+            }
+          ]
+        },
+        "roadmap": {
+          "steps": [
+            {
+              "title": "Workflow Analysis",
+              "description": "Identification of high-value targets for automation in your operations."
+            },
+            {
+              "title": "Agent Architecture",
+              "description": "Design of secure AI agents tailored to specific business functions."
+            },
+            {
+              "title": "Integration and Training",
+              "description": "Connecting agents to your data lakes and APIs, and fine-tuning models."
+            },
+            {
+              "title": "Deployment and Monitoring",
+              "description": "Rollout of agents with comprehensive oversight and performance tracking."
+            }
+          ]
+        },
+        "deliverables": [
+          "Custom AI Agent Suite",
+          "Private LLM Deployment",
+          "Real-time Analytics Dashboard",
+          "24/7 Operational Uptime",
+          "ROI Impact Report"
+        ],
+        "guarantee": "We guarantee a minimum 30% reduction in processing time for automated workflows in the first quarter.",
+        "faq": [
+          {
+            "question": "Are our data secure?",
+            "answer": "Yes. We deploy private instances of AI models within your secure infrastructure."
+          },
+          {
+            "question": "Can agents make complex decisions?",
+            "answer": "Our agents have 'human-in-the-loop' protocols to escalate to human experts when confidence is low."
+          }
+        ]
+      },
+      "personal": {
+        "hero": {
+          "title": "Reclaim Your Time",
+          "subtitle": "Your Personal Digital Butler",
+          "description": "Imagine a life where mundane tasks handle themselves. Our personal agents manage schedules, emails, and research, giving you back your freedom.",
+          "cta": "Get Assistant",
+          "gradient": "from-emerald-500 to-green-500"
+        },
+        "diagnosis": {
+          "title": "Feeling Overwhelmed?",
+          "problems": [
+            "Constant context switching killing your productivity.",
+            "Inbox always overflowing.",
+            "Missing important appointments or deadlines.",
+            "Zero time for personal growth or relaxation."
+          ],
+          "painPoint": "Burnout from repetitive tasks",
+          "solution": "Personal Digital Assistant",
+          "comparison": [
+            {
+              "them": "Disorganized Chaos",
+              "us": "Automated Order"
+            },
+            {
+              "them": "Missed Opportunities",
+              "us": "Perfect Timing"
+            },
+            {
+              "them": "Burnout",
+              "us": "Peace of Mind"
+            }
+          ]
+        },
+        "roadmap": {
+          "steps": [
+            {
+              "title": "Lifestyle Assessment",
+              "description": "Understanding your daily friction points and automation needs."
+            },
+            {
+              "title": "Agent Configuration",
+              "description": "Setup of your personal AI with access to your calendar and tools."
+            },
+            {
+              "title": "Automation Setup",
+              "description": "Creation of workflows for email filtering, scheduling, and information retrieval."
+            },
+            {
+              "title": "Onboarding",
+              "description": "Teaching you how to effectively interact with your new digital assistant."
+            }
+          ]
+        },
+        "deliverables": [
+          "Personalized AI Assistant",
+          "Email and Calendar Integration",
+          "Auto-Research Tools",
+          "Daily Briefing System",
+          "Mobile Access App"
+        ],
+        "guarantee": "If you don't save at least 10 hours a week in your first month, we refund the setup fee.",
+        "faq": [
+          {
+            "question": "Is it hard to set up?",
+            "answer": "No, we handle all technical configuration. You just connect your accounts and start chatting."
+          },
+          {
+            "question": "What about my privacy?",
+            "answer": "Your personal agent is configured with strict privacy controls. We do not sell or share your data."
+          }
+        ]
+      }
+    }
   }
 }

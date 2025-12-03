@@ -2,117 +2,557 @@
   "Index": {
     "hero": {
       "title": "CuchoLambreta Nexus",
-      "subtitle": "The Global Digital Orchestration Council. Tell us your vision, we design the architecture."
+      "subtitle": "Le Conseil Mondial d'Orchestration Numérique. Dites-nous votre vision, nous concevons l'architecture."
     },
     "terminal": {
       "placeholder": {
-        "discovery": "Describe your SaaS Platform or Complex System...",
-        "software": "Describe your SaaS Platform or Complex System...",
-        "web": "Describe your Corporate Site or Portfolio...",
-        "agent": "Describe the task you want to automate..."
+        "discovery": "Décrivez votre plateforme SaaS ou système complexe...",
+        "software": "Décrivez votre plateforme SaaS ou système complexe...",
+        "web": "Décrivez votre site corporatif ou portfolio...",
+        "agent": "Décrivez la tâche que vous souhaitez automatiser..."
       },
       "logs": {
-        "init": "Initializing Team Protocols...",
-        "analyzing": "The Council is analyzing...",
-        "handover": "Request Approved by The Council."
+        "init": "Initialisation des protocoles d'équipe...",
+        "analyzing": "Le Conseil analyse...",
+        "handover": "Demande approuvée par le Conseil."
       },
       "modes": {
-        "discovery": "Discovery",
-        "software": "Software",
+        "discovery": "Découverte",
+        "software": "Logiciel",
         "web": "Web",
         "agent": "Agent"
       },
       "scopes": {
-        "enterprise": "Enterprise",
-        "personal": "Personal"
+        "enterprise": "Entreprise",
+        "personal": "Personnel"
       }
     },
     "services": {
       "software": {
-        "title": "Software Architecture",
-        "subtitle": "Robust Systems.",
-        "description": "Scalable and secure systems built by our senior engineers."
+        "title": "Architecture Logicielle",
+        "subtitle": "Systèmes Robustes.",
+        "description": "Systèmes évolutifs et sécurisés construits par nos ingénieurs seniors."
       },
       "web": {
-        "title": "Web Experience",
-        "subtitle": "Design that Converts.",
-        "description": "High-performance sites designed to convert."
+        "title": "Expérience Web",
+        "subtitle": "Design qui Convertit.",
+        "description": "Sites haute performance conçus pour convertir."
       },
       "agent": {
-        "title": "AI Workforce",
-        "subtitle": "Autonomous Agents 24/7.",
-        "description": "Autonomous agents that work while we sleep."
+        "title": "Main-d'œuvre IA",
+        "subtitle": "Agents Autonomes 24/7.",
+        "description": "Des agents autonomes qui travaillent pendant que nous dormons."
       }
     },
     "team": {
-      "title": "The Council",
-      "subtitle": "A collective of experts united by excellence."
+      "title": "Le Conseil",
+      "subtitle": "Un collectif d'experts unis par l'excellence."
     },
     "cta": {
-      "bookCall": "Book Strategy",
-      "start": "Start Protocol"
+      "bookCall": "Réserver une Stratégie",
+      "start": "Lancer le Protocole"
     }
   },
   "ServicesPage": {
-    "back": "Back to Nexus",
-    "diagnosis": "The Diagnosis",
-    "diagnosisSubtitle": "Why the traditional approach is failing you.",
-    "painPoint": "Pain Point",
-    "solution": "Our Solution",
-    "oldWay": "Traditional Agencies",
+    "back": "Retour à Nexus",
+    "diagnosis": "Le Diagnostic",
+    "diagnosisSubtitle": "Pourquoi l'approche traditionnelle vous fait défaut.",
+    "painPoint": "Point de Douleur",
+    "solution": "Notre Solution",
+    "oldWay": "Agences Traditionnelles",
     "newWay": "Cucho Lambreta",
-    "roadmap": "Execution Roadmap",
-    "deliverables": "Tangible Deliverables",
-    "guarantee": "100% Risk-Free Guarantee",
-    "faq": "Frequently Asked Questions",
-    "ready": "Ready to Start?",
-    "initProtocol": "Initialize Protocol"
+    "roadmap": "Feuille de Route d'Exécution",
+    "deliverables": "Livrables Tangibles",
+    "guarantee": "Garantie 100% Sans Risque",
+    "faq": "Foire Aux Questions",
+    "ready": "Prêt à Commencer ?",
+    "initProtocol": "Initialiser le Protocole"
   },
   "DynamicDescription": {
     "discovery": {
-      "personal": "Let our AI analyze your personal needs.",
-      "enterprise": "Our AI will assess your corporate requirements."
+      "personal": "Laissez notre IA analyser vos besoins personnels.",
+      "enterprise": "Notre IA évaluera vos besoins corporatifs."
     },
     "software": {
-      "personal": "Build custom software for your ideas.",
-      "enterprise": "Develop scalable, enterprise-grade architectures."
+      "personal": "Construisez des logiciels personnalisés pour vos idées.",
+      "enterprise": "Développez des architectures évolutives de niveau entreprise."
     },
     "web": {
-      "personal": "Create a stunning personal portfolio.",
-      "enterprise": "Design a high-converting corporate portal."
+      "personal": "Créez un portfolio personnel époustouflant.",
+      "enterprise": "Concevez un portail corporatif à haute conversion."
     },
     "agent": {
-      "personal": "Deploy personal AI agents for daily tasks.",
-      "enterprise": "Integrate advanced AI workforce automation."
+      "personal": "Déployez des agents IA personnels pour les tâches quotidiennes.",
+      "enterprise": "Intégrez une automatisation avancée de la main-d'œuvre IA."
     }
   },
   "ProjectRequestModal": {
-    "title": "Start a Project",
-    "subtitle": "Tell us about your vision.",
-    "successTitle": "Request Received",
-    "successMessage": "We'll be in touch shortly to discuss the details.",
+    "title": "Démarrer un Projet",
+    "subtitle": "Parlez-nous de votre vision.",
+    "successTitle": "Demande Reçue",
+    "successMessage": "Nous vous contacterons bientôt pour discuter des détails.",
     "fields": {
-      "name": "Name",
-      "email": "Email",
-      "company": "Company (Optional)",
+      "name": "Nom",
+      "email": "E-mail",
+      "company": "Entreprise (Optionnel)",
       "type": "Type",
       "budget": "Budget",
-      "description": "Project Description"
+      "description": "Description du Projet"
     },
     "placeholders": {
-      "name": "John Doe",
-      "email": "john@example.com",
+      "name": "Jean Dupont",
+      "email": "jean@exemple.com",
       "company": "Acme Inc.",
-      "budget": "e.g. $5k - $10k",
-      "description": "Describe your project goals and requirements..."
+      "budget": "ex. $5k - $10k",
+      "description": "Décrivez les objectifs et les exigences de votre projet..."
     },
     "options": {
-      "web": "Web Development",
-      "software": "Software Engineering",
-      "ai": "AI Integration",
+      "web": "Développement Web",
+      "software": "Ingénierie Logicielle",
+      "ai": "Intégration IA",
       "consulting": "Consulting"
     },
-    "submit": "Submit Request",
-    "sending": "Sending..."
+    "submit": "Envoyer la Demande",
+    "sending": "Envoi..."
+  },
+  "ServicesData": {
+    "software": {
+      "enterprise": {
+        "hero": {
+          "title": "Ingénierie de Grade Militaire",
+          "subtitle": "Systèmes Critiques pour Opérations à Grande Échelle",
+          "description": "Nous concevons des écosystèmes logiciels robustes, évolutifs et sécurisés. Nous modernisons l'infrastructure existante en garantissant la conformité ISO 27001 et une disponibilité de 99,99%.",
+          "cta": "Planifier une Revue d'Architecture",
+          "gradient": "from-blue-500 to-cyan-500"
+        },
+        "diagnosis": {
+          "title": "Votre Infrastructure vous Freine-t-elle ?",
+          "problems": [
+            "Systèmes hérités générant de la dette technique.",
+            "Vulnérabilités de sécurité et risque de conformité.",
+            "Incapacité à évoluer horizontalement lors des pics de charge.",
+            "Silos de données fragmentés empêchant une analyse unifiée."
+          ],
+          "painPoint": "Dette Technique",
+          "solution": "Microservices Immuables",
+          "comparison": [
+            {
+              "them": "Correctifs Temporaires",
+              "us": "Architecture Holistique"
+            },
+            {
+              "them": "Sécurité Réactive",
+              "us": "Security First"
+            },
+            {
+              "them": "Mise à l'échelle Manuelle",
+              "us": "Auto-Scaling Natif"
+            }
+          ]
+        },
+        "roadmap": {
+          "steps": [
+            {
+              "title": "Audit et Découverte",
+              "description": "Analyse approfondie de l'architecture actuelle, de la posture de sécurité et de la qualité du code."
+            },
+            {
+              "title": "Plan de Migration Stratégique",
+              "description": "Feuille de route par phases pour passer des monolithes aux microservices sans temps d'arrêt."
+            },
+            {
+              "title": "Implémentation Core",
+              "description": "Développement de services backend haute disponibilité et de passerelles API sécurisées."
+            },
+            {
+              "title": "Optimisation et Livraison",
+              "description": "Réglage des performances, tests de charge et documentation exhaustive pour les équipes internes."
+            }
+          ]
+        },
+        "deliverables": [
+          "Blueprint de Microservices",
+          "Rapport de Conformité ISO 27001",
+          "Cluster Haute Disponibilité",
+          "Stratégie de Migration",
+          "Pipelines CI/CD Automatisés"
+        ],
+        "guarantee": "Nous garantissons zéro perte de données pendant la migration et une amélioration minimale de 20% du débit, ou nous continuons à optimiser sans frais.",
+        "faq": [
+          {
+            "question": "Comment gérez-vous la migration des données existantes ?",
+            "answer": "Nous utilisons le modèle 'Strangler Fig' pour migrer les fonctionnalités de manière incrémentielle, garantissant zéro temps d'arrêt et une vérification de l'intégrité des données étape par étape."
+          },
+          {
+            "question": "Pouvez-vous travailler avec notre équipe de sécurité ?",
+            "answer": "Absolument. Nous nous intégrons à vos processus SecOps pour garantir que tout le code répond à vos normes spécifiques."
+          }
+        ]
+      },
+      "personal": {
+        "hero": {
+          "title": "Matérialisez votre Startup",
+          "subtitle": "Du Concept au Marché en Semaines, Pas en Mois",
+          "description": "Lancez votre idée avec un MVP évolutif et rentable. Nous privilégions la vitesse de mise sur le marché et les fonctionnalités de base pour que vous puissiez gagner en traction et en financement.",
+          "cta": "Commencer la Construction",
+          "gradient": "from-blue-500 to-cyan-500"
+        },
+        "diagnosis": {
+          "title": "Du Mal à Lancer ?",
+          "problems": [
+            "Submergé par la complexité technique et la paralysie de l'analyse.",
+            "Peur de construire des fonctionnalités que les utilisateurs ne veulent pas.",
+            "Budget limité nécessitant une efficacité extrême.",
+            "Cycles de développement lents manquant les fenêtres de marché."
+          ],
+          "painPoint": "Agences lentes",
+          "solution": "MVP en Semaines",
+          "comparison": [
+            {
+              "them": "Sur-Ingénierie",
+              "us": "Focus sur la Valeur Core"
+            },
+            {
+              "them": "Développement Lent",
+              "us": "Itération Rapide"
+            },
+            {
+              "them": "Coût Initial Élevé",
+              "us": "Rentable"
+            }
+          ]
+        },
+        "roadmap": {
+          "steps": [
+            {
+              "title": "Validation du Concept",
+              "description": "Affinement de votre idée en une spécification technique lean axée sur la valeur."
+            },
+            {
+              "title": "Prototypage Rapide",
+              "description": "Construction d'un prototype fonctionnel pour tester les flux utilisateurs et les premiers retours."
+            },
+            {
+              "title": "Développement de MVP",
+              "description": "Développement agile du MVP prêt pour la production utilisant une technologie cloud-native."
+            },
+            {
+              "title": "Lancement et Itération",
+              "description": "Déploiement en production et configuration de l'analyse pour mesurer le comportement."
+            }
+          ]
+        },
+        "deliverables": [
+          "MVP Entièrement Fonctionnel",
+          "Architecture Cloud Évolutive",
+          "UI Mobile-Responsive",
+          "Tableau de Bord d'Administration",
+          "Intégration Analytics"
+        ],
+        "guarantee": "Nous livrons un MVP fonctionnel dans les délais et le budget convenus. Si nous échouons, nous travaillons gratuitement jusqu'à ce qu'il soit en ligne.",
+        "faq": [
+          {
+            "question": "Quelle stack technologique utilisez-vous ?",
+            "answer": "Nous choisissons le meilleur outil, généralement des stacks modernes comme React, Node.js et Supabase pour un développement rapide et une évolutivité."
+          },
+          {
+            "question": "Puis-je faire évoluer cela plus tard ?",
+            "answer": "Oui. Nous construisons en pensant à l'échelle, en utilisant un code modulaire et une infrastructure cloud qui grandit avec votre base d'utilisateurs."
+          }
+        ]
+      }
+    },
+    "web": {
+      "enterprise": {
+        "hero": {
+          "title": "Identité Corporative Blindée",
+          "subtitle": "Présence de Marque Dominante à l'Échelle Mondiale",
+          "description": "Nous construisons des plateformes web de qualité entreprise qui imposent l'autorité de la marque et offrent des expériences ultra-rapides à l'échelle mondiale. Utilisant des design systems avancés et des CDN edge-network.",
+          "cta": "Élever votre Marque",
+          "gradient": "from-purple-500 to-pink-500"
+        },
+        "diagnosis": {
+          "title": "Votre Présence Numérique est-elle Fragmentée ?",
+          "problems": [
+            "Représentation de la marque incohérente sur les sites régionaux.",
+            "Chargements lents nuisant au SEO et à la rétention des utilisateurs.",
+            "Difficulté à gérer les mises à jour de contenu mondiales.",
+            "Manque de conformité d'accessibilité (WCAG) exposant à un risque juridique."
+          ],
+          "painPoint": "Sites lents nuisent à la marque",
+          "solution": "Design Systems Globaux",
+          "comparison": [
+            {
+              "them": "UI Incohérente",
+              "us": "Cohérence Pixel-Perfect"
+            },
+            {
+              "them": "Performance Lente",
+              "us": "Vitesse Edge-Network"
+            },
+            {
+              "them": "Difficile à Gérer",
+              "us": "Headless CMS"
+            }
+          ]
+        },
+        "roadmap": {
+          "steps": [
+            {
+              "title": "Audit Global",
+              "description": "Examen de l'état actuel du web, des métriques de performance et de la cohérence de la marque."
+            },
+            {
+              "title": "Création de Design System",
+              "description": "Développement d'une bibliothèque de composants unifiée pour assurer l'intégrité de la marque."
+            },
+            {
+              "title": "Ingénierie de Plateforme",
+              "description": "Construction d'une architecture Headless CMS avec distribution CDN mondiale."
+            },
+            {
+              "title": "Déploiement et Formation",
+              "description": "Lancement par phases des sites régionaux et formation des équipes de contenu."
+            }
+          ]
+        },
+        "deliverables": [
+          "Design System Global",
+          "Intégration Headless CMS",
+          "Configuration CDN Global",
+          "Conformité WCAG 2.1 AA",
+          "Tableau de Bord Analytics Avancé"
+        ],
+        "guarantee": "Nous garantissons un score Google Lighthouse de 90+ et une conformité WCAG totale, assurant que votre marque mène le marché.",
+        "faq": [
+          {
+            "question": "Comment gérez-vous le support multi-langue ?",
+            "answer": "Nous implémentons des frameworks d'internationalisation (i18n) robustes intégrés profondément avec le CMS."
+          },
+          {
+            "question": "Cela s'intégrera-t-il à notre CRM ?",
+            "answer": "Oui, nous construisons des connecteurs sur mesure pour synchroniser les données des utilisateurs et des leads directement vers Salesforce, HubSpot, etc."
+          }
+        ]
+      },
+      "personal": {
+        "hero": {
+          "title": "Votre Portfolio, Votre Héritage",
+          "subtitle": "Identité Visuelle qui Commande l'Attention",
+          "description": "Démarquez-vous sur un marché saturé avec un site portfolio époustouflant et performant. Nous nous concentrons sur l'impact visuel et le storytelling pour élever votre marque personnelle.",
+          "cta": "Construire ma Marque",
+          "gradient": "from-purple-500 to-pink-500"
+        },
+        "diagnosis": {
+          "title": "Êtes-vous Invisible en Ligne ?",
+          "problems": [
+            "Modèles génériques qui n'impressionnent personne.",
+            "Portfolio ne mettant pas en valeur votre meilleur travail efficacement.",
+            "Faibles taux de conversion des visiteurs.",
+            "Difficulté à mettre à jour le contenu sans aide technique."
+          ],
+          "painPoint": "Être invisible",
+          "solution": "Impact Visuel Immédiat",
+          "comparison": [
+            {
+              "them": "Modèles Génériques",
+              "us": "Design Sur Mesure"
+            },
+            {
+              "them": "Contenu Statique",
+              "us": "Storytelling Dynamique"
+            },
+            {
+              "them": "Faible Impact",
+              "us": "Conversion Élevée"
+            }
+          ]
+        },
+        "roadmap": {
+          "steps": [
+            {
+              "title": "Découverte de Marque",
+              "description": "Définition de votre proposition de valeur unique et de votre identité visuelle."
+            },
+            {
+              "title": "Design Visuel",
+              "description": "Création de maquettes haute fidélité capturant votre personnalité et votre professionnalisme."
+            },
+            {
+              "title": "Développement",
+              "description": "Codage d'un site pixel-perfect, responsive et avec des animations fluides."
+            },
+            {
+              "title": "Stratégie de Contenu",
+              "description": "Optimisation de votre copie et de vos études de cas pour un impact maximal."
+            }
+          ]
+        },
+        "deliverables": [
+          "Site Web Portfolio Personnalisé",
+          "Kit d'Identité Visuelle",
+          "CMS pour Mises à Jour Faciles",
+          "Optimisation SEO",
+          "Intégration Réseaux Sociaux"
+        ],
+        "guarantee": "Vous allez adorer votre nouveau site. Nous offrons des révisions de design illimitées jusqu'à ce que vous soyez 100% satisfait.",
+        "faq": [
+          {
+            "question": "Dois-je savoir coder ?",
+            "answer": "Pas du tout. Nous fournissons un CMS facile à utiliser pour que vous puissiez mettre à jour textes et images quand vous le souhaitez."
+          },
+          {
+            "question": "Combien de temps cela prend-il ?",
+            "answer": "Généralement, nous lançons un site personnel à fort impact en 2-4 semaines."
+          }
+        ]
+      }
+    },
+    "agent": {
+      "enterprise": {
+        "hero": {
+          "title": "Révolution de Productivité",
+          "subtitle": "Automatisation des Opérations pour un ROI Massif",
+          "description": "Déployez des agents IA intelligents opérant 24/7 pour optimiser les flux, analyser le big data et stimuler l'efficacité. Solutions sécurisées et privées qui s'intègrent à votre stack.",
+          "cta": "Automatiser l'Entreprise",
+          "gradient": "from-emerald-500 to-green-500"
+        },
+        "diagnosis": {
+          "title": "Noyé dans l'Inefficacité Opérationnelle ?",
+          "problems": [
+            "Coûts opérationnels élevés dus aux tâches manuelles répétitives.",
+            "Temps de réponse lents affectant la satisfaction client.",
+            "Incapacité à tirer des insights de grands volumes de données.",
+            "Risques d'erreur humaine dans les flux critiques."
+          ],
+          "painPoint": "Coûts opérationnels élevés",
+          "solution": "Force de Travail Autonome 24/7",
+          "comparison": [
+            {
+              "them": "Travail Manuel",
+              "us": "Force de Travail IA"
+            },
+            {
+              "them": "Support Réactif",
+              "us": "Agents Proactifs"
+            },
+            {
+              "them": "Silos de Données",
+              "us": "Insights Actionnables"
+            }
+          ]
+        },
+        "roadmap": {
+          "steps": [
+            {
+              "title": "Analyse des Flux",
+              "description": "Identification des objectifs à haute valeur pour l'automatisation dans vos opérations."
+            },
+            {
+              "title": "Architecture d'Agents",
+              "description": "Conception d'agents IA sécurisés adaptés aux fonctions métier spécifiques."
+            },
+            {
+              "title": "Intégration et Entraînement",
+              "description": "Connexion des agents à vos lacs de données et API, et affinement des modèles."
+            },
+            {
+              "title": "Déploiement et Surveillance",
+              "description": "Lancement des agents avec supervision complète et suivi des performances."
+            }
+          ]
+        },
+        "deliverables": [
+          "Suite d'Agents IA Personnalisée",
+          "Déploiement de LLM Privé",
+          "Tableau de Bord Analytics Temps Réel",
+          "Uptime Opérationnel 24/7",
+          "Rapport d'Impact ROI"
+        ],
+        "guarantee": "Nous garantissons une réduction minimale de 30% du temps de traitement pour les flux automatisés au premier trimestre.",
+        "faq": [
+          {
+            "question": "Nos données sont-elles sécurisées ?",
+            "answer": "Oui. Nous déployons des instances privées de modèles IA au sein de votre infrastructure sécurisée."
+          },
+          {
+            "question": "Les agents peuvent-ils prendre des décisions complexes ?",
+            "answer": "Nos agents ont des protocoles 'human-in-the-loop' pour escalader vers des experts humains lorsque la confiance est faible."
+          }
+        ]
+      },
+      "personal": {
+        "hero": {
+          "title": "Récupérez votre Temps",
+          "subtitle": "Votre Majordome Numérique Personnel",
+          "description": "Imaginez une vie où les tâches banales se gèrent toutes seules. Nos agents personnels gèrent les agendas, les e-mails et la recherche, vous rendant votre liberté.",
+          "cta": "Obtenir un Assistant",
+          "gradient": "from-emerald-500 to-green-500"
+        },
+        "diagnosis": {
+          "title": "Vous vous Sentez Submergé ?",
+          "problems": [
+            "Changement de contexte constant tuant votre productivité.",
+            "Boîte de réception toujours débordante.",
+            "Manquer des rendez-vous ou des échéances importantes.",
+            "Zéro temps pour la croissance personnelle ou la détente."
+          ],
+          "painPoint": "Burnout par tâches répétitives",
+          "solution": "Assistant Personnel Numérique",
+          "comparison": [
+            {
+              "them": "Chaos Désorganisé",
+              "us": "Ordre Automatisé"
+            },
+            {
+              "them": "Opportunités Manquées",
+              "us": "Timing Parfait"
+            },
+            {
+              "them": "Burnout",
+              "us": "Paix d'Esprit"
+            }
+          ]
+        },
+        "roadmap": {
+          "steps": [
+            {
+              "title": "Évaluation du Style de Vie",
+              "description": "Compréhension de vos points de friction quotidiens et de vos besoins d'automatisation."
+            },
+            {
+              "title": "Configuration de l'Agent",
+              "description": "Configuration de votre IA personnelle avec accès à votre calendrier et vos outils."
+            },
+            {
+              "title": "Configuration de l'Automatisation",
+              "description": "Création de flux pour le filtrage des e-mails, la planification et la recherche d'informations."
+            },
+            {
+              "title": "Onboarding",
+              "description": "Vous apprendre à interagir efficacement avec votre nouvel assistant numérique."
+            }
+          ]
+        },
+        "deliverables": [
+          "Assistant IA Personnalisé",
+          "Intégration E-mail et Calendrier",
+          "Outils de Recherche Auto",
+          "Système de Briefing Quotidien",
+          "App d'Accès Mobile"
+        ],
+        "guarantee": "Si vous n'économisez pas au moins 10 heures par semaine le premier mois, nous vous remboursons les frais d'installation.",
+        "faq": [
+          {
+            "question": "Est-ce difficile à configurer ?",
+            "answer": "Non, nous gérons toute la configuration technique. Vous connectez simplement vos comptes et commencez à discuter."
+          },
+          {
+            "question": "Qu'en est-il de ma vie privée ?",
+            "answer": "Votre agent personnel est configuré avec des contrôles de confidentialité stricts. Nous ne vendons ni ne partageons vos données."
+          }
+        ]
+      }
+    }
   }
 }

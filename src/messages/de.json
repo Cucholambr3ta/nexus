@@ -2,117 +2,557 @@
   "Index": {
     "hero": {
       "title": "CuchoLambreta Nexus",
-      "subtitle": "The Global Digital Orchestration Council. Tell us your vision, we design the architecture."
+      "subtitle": "Der Globale Rat für Digitale Orchestrierung. Erzählen Sie uns Ihre Vision, wir entwerfen die Architektur."
     },
     "terminal": {
       "placeholder": {
-        "discovery": "Describe your SaaS Platform or Complex System...",
-        "software": "Describe your SaaS Platform or Complex System...",
-        "web": "Describe your Corporate Site or Portfolio...",
-        "agent": "Describe the task you want to automate..."
+        "discovery": "Beschreiben Sie Ihre SaaS-Plattform oder Ihr komplexes System...",
+        "software": "Beschreiben Sie Ihre SaaS-Plattform oder Ihr komplexes System...",
+        "web": "Beschreiben Sie Ihre Unternehmensseite oder Ihr Portfolio...",
+        "agent": "Beschreiben Sie die Aufgabe, die Sie automatisieren möchten..."
       },
       "logs": {
-        "init": "Initializing Team Protocols...",
-        "analyzing": "The Council is analyzing...",
-        "handover": "Request Approved by The Council."
+        "init": "Initialisiere Team-Protokolle...",
+        "analyzing": "Der Rat analysiert...",
+        "handover": "Anfrage vom Rat genehmigt."
       },
       "modes": {
-        "discovery": "Discovery",
+        "discovery": "Entdeckung",
         "software": "Software",
         "web": "Web",
         "agent": "Agent"
       },
       "scopes": {
-        "enterprise": "Enterprise",
-        "personal": "Personal"
+        "enterprise": "Unternehmen",
+        "personal": "Persönlich"
       }
     },
     "services": {
       "software": {
-        "title": "Software Architecture",
-        "subtitle": "Robust Systems.",
-        "description": "Scalable and secure systems built by our senior engineers."
+        "title": "Softwarearchitektur",
+        "subtitle": "Robuste Systeme.",
+        "description": "Skalierbare und sichere Systeme, gebaut von unseren Senior-Ingenieuren."
       },
       "web": {
-        "title": "Web Experience",
-        "subtitle": "Design that Converts.",
-        "description": "High-performance sites designed to convert."
+        "title": "Web-Erlebnis",
+        "subtitle": "Design, das konvertiert.",
+        "description": "Hochleistungs-Websites, die auf Konversion ausgelegt sind."
       },
       "agent": {
-        "title": "AI Workforce",
-        "subtitle": "Autonomous Agents 24/7.",
-        "description": "Autonomous agents that work while we sleep."
+        "title": "KI-Arbeitskraft",
+        "subtitle": "Autonome Agenten 24/7.",
+        "description": "Autonome Agenten, die arbeiten, während wir schlafen."
       }
     },
     "team": {
-      "title": "The Council",
-      "subtitle": "A collective of experts united by excellence."
+      "title": "Der Rat",
+      "subtitle": "Ein Kollektiv von Experten, vereint durch Exzellenz."
     },
     "cta": {
-      "bookCall": "Book Strategy",
-      "start": "Start Protocol"
+      "bookCall": "Strategie Buchen",
+      "start": "Protokoll Starten"
     }
   },
   "ServicesPage": {
-    "back": "Back to Nexus",
-    "diagnosis": "The Diagnosis",
-    "diagnosisSubtitle": "Why the traditional approach is failing you.",
-    "painPoint": "Pain Point",
-    "solution": "Our Solution",
-    "oldWay": "Traditional Agencies",
+    "back": "Zurück zu Nexus",
+    "diagnosis": "Die Diagnose",
+    "diagnosisSubtitle": "Warum der traditionelle Ansatz bei Ihnen versagt.",
+    "painPoint": "Schmerzpunkt",
+    "solution": "Unsere Lösung",
+    "oldWay": "Traditionelle Agenturen",
     "newWay": "Cucho Lambreta",
-    "roadmap": "Execution Roadmap",
-    "deliverables": "Tangible Deliverables",
-    "guarantee": "100% Risk-Free Guarantee",
-    "faq": "Frequently Asked Questions",
-    "ready": "Ready to Start?",
-    "initProtocol": "Initialize Protocol"
+    "roadmap": "Ausführungs-Fahrplan",
+    "deliverables": "Greifbare Ergebnisse",
+    "guarantee": "100% Risikofreie Garantie",
+    "faq": "Häufig Gestellte Fragen",
+    "ready": "Bereit zu Starten?",
+    "initProtocol": "Protokoll Initialisieren"
   },
   "DynamicDescription": {
     "discovery": {
-      "personal": "Let our AI analyze your personal needs.",
-      "enterprise": "Our AI will assess your corporate requirements."
+      "personal": "Lassen Sie unsere KI Ihre persönlichen Bedürfnisse analysieren.",
+      "enterprise": "Unsere KI wird Ihre Unternehmensanforderungen bewerten."
     },
     "software": {
-      "personal": "Build custom software for your ideas.",
-      "enterprise": "Develop scalable, enterprise-grade architectures."
+      "personal": "Bauen Sie individuelle Software für Ihre Ideen.",
+      "enterprise": "Entwickeln Sie skalierbare Architekturen auf Unternehmensebene."
     },
     "web": {
-      "personal": "Create a stunning personal portfolio.",
-      "enterprise": "Design a high-converting corporate portal."
+      "personal": "Erstellen Sie ein atemberaubendes persönliches Portfolio.",
+      "enterprise": "Entwerfen Sie ein hochkonvertierendes Unternehmensportal."
     },
     "agent": {
-      "personal": "Deploy personal AI agents for daily tasks.",
-      "enterprise": "Integrate advanced AI workforce automation."
+      "personal": "Setzen Sie persönliche KI-Agenten für tägliche Aufgaben ein.",
+      "enterprise": "Integrieren Sie fortschrittliche KI-Arbeitskraft-Automatisierung."
     }
   },
   "ProjectRequestModal": {
-    "title": "Start a Project",
-    "subtitle": "Tell us about your vision.",
-    "successTitle": "Request Received",
-    "successMessage": "We'll be in touch shortly to discuss the details.",
+    "title": "Projekt Starten",
+    "subtitle": "Erzählen Sie uns von Ihrer Vision.",
+    "successTitle": "Anfrage Empfangen",
+    "successMessage": "Wir werden uns in Kürze bei Ihnen melden, um die Details zu besprechen.",
     "fields": {
       "name": "Name",
-      "email": "Email",
-      "company": "Company (Optional)",
-      "type": "Type",
+      "email": "E-Mail",
+      "company": "Unternehmen (Optional)",
+      "type": "Typ",
       "budget": "Budget",
-      "description": "Project Description"
+      "description": "Projektbeschreibung"
     },
     "placeholders": {
-      "name": "John Doe",
-      "email": "john@example.com",
-      "company": "Acme Inc.",
-      "budget": "e.g. $5k - $10k",
-      "description": "Describe your project goals and requirements..."
+      "name": "Max Mustermann",
+      "email": "max@beispiel.com",
+      "company": "Musterfirma GmbH",
+      "budget": "z.B. $5k - $10k",
+      "description": "Beschreiben Sie Ihre Projektziele und Anforderungen..."
     },
     "options": {
-      "web": "Web Development",
-      "software": "Software Engineering",
-      "ai": "AI Integration",
-      "consulting": "Consulting"
+      "web": "Webentwicklung",
+      "software": "Softwaretechnik",
+      "ai": "KI-Integration",
+      "consulting": "Beratung"
     },
-    "submit": "Submit Request",
-    "sending": "Sending..."
+    "submit": "Anfrage Senden",
+    "sending": "Senden..."
+  },
+  "ServicesData": {
+    "software": {
+      "enterprise": {
+        "hero": {
+          "title": "Ingenieurwesen auf Militärniveau",
+          "subtitle": "Missionskritische Systeme für Großoperationen",
+          "description": "Wir entwerfen robuste, skalierbare und sichere Software-Ökosysteme. Wir modernisieren Legacy-Infrastruktur und garantieren ISO 27001-Konformität sowie 99,99% Verfügbarkeit.",
+          "cta": "Architektur-Review planen",
+          "gradient": "from-blue-500 to-cyan-500"
+        },
+        "diagnosis": {
+          "title": "Hält Ihre Infrastruktur Sie zurück?",
+          "problems": [
+            "Legacy-Systeme verursachen technische Schulden.",
+            "Sicherheitslücken und Compliance-Risiken.",
+            "Unfähigkeit, bei Lastspitzen horizontal zu skalieren.",
+            "Fragmentierte Datensilos verhindern einheitliche Analysen."
+          ],
+          "painPoint": "Technische Schulden",
+          "solution": "Unveränderliche Microservices",
+          "comparison": [
+            {
+              "them": "Temporäre Patches",
+              "us": "Ganzheitliche Architektur"
+            },
+            {
+              "them": "Reaktive Sicherheit",
+              "us": "Security First"
+            },
+            {
+              "them": "Manuelle Skalierung",
+              "us": "Native Auto-Scaling"
+            }
+          ]
+        },
+        "roadmap": {
+          "steps": [
+            {
+              "title": "Audit und Discovery",
+              "description": "Tiefgehende Analyse der aktuellen Architektur, Sicherheitslage und Codequalität."
+            },
+            {
+              "title": "Strategischer Migrationsplan",
+              "description": "Phasenweiser Fahrplan für den Übergang von Monolithen zu Microservices ohne Ausfallzeiten."
+            },
+            {
+              "title": "Kernimplementierung",
+              "description": "Entwicklung von hochverfügbaren Backend-Diensten und sicheren API-Gateways."
+            },
+            {
+              "title": "Optimierung und Lieferung",
+              "description": "Leistungsoptimierung, Lasttests und umfassende Dokumentation für interne Teams."
+            }
+          ]
+        },
+        "deliverables": [
+          "Microservices Blueprint",
+          "ISO 27001 Compliance-Bericht",
+          "Hochverfügbarkeits-Cluster",
+          "Migrationsstrategie",
+          "Automatisierte CI/CD-Pipelines"
+        ],
+        "guarantee": "Wir garantieren null Datenverlust während der Migration und eine Mindestverbesserung des Durchsatzes um 20%, oder wir optimieren kostenlos weiter.",
+        "faq": [
+          {
+            "question": "Wie gehen Sie mit der Migration von Legacy-Daten um?",
+            "answer": "Wir verwenden das 'Strangler Fig'-Muster, um Funktionen inkrementell zu migrieren, wobei null Ausfallzeiten und eine schrittweise Überprüfung der Datenintegrität gewährleistet werden."
+          },
+          {
+            "question": "Können Sie mit unserem Sicherheitsteam zusammenarbeiten?",
+            "answer": "Absolut. Wir integrieren uns in Ihre SecOps-Prozesse, um sicherzustellen, dass der gesamte Code Ihren spezifischen Standards entspricht."
+          }
+        ]
+      },
+      "personal": {
+        "hero": {
+          "title": "Realisieren Sie Ihr Startup",
+          "subtitle": "Vom Konzept zum Markt in Wochen, nicht Monaten",
+          "description": "Starten Sie Ihre Idee mit einem skalierbaren und kosteneffizienten MVP. Wir priorisieren Marktgeschwindigkeit und Kernfunktionalität, damit Sie Traktion und Finanzierung gewinnen können.",
+          "cta": "Bau beginnen",
+          "gradient": "from-blue-500 to-cyan-500"
+        },
+        "diagnosis": {
+          "title": "Schwierigkeiten beim Start?",
+          "problems": [
+            "Überwältigt von technischer Komplexität und Analyse-Paralyse.",
+            "Angst, Funktionen zu bauen, die Benutzer nicht wollen.",
+            "Begrenztes Budget erfordert extreme Effizienz.",
+            "Langsame Entwicklungszyklen verpassen Marktfenster."
+          ],
+          "painPoint": "Langsame Agenturen",
+          "solution": "MVP in Wochen",
+          "comparison": [
+            {
+              "them": "Over-Engineering",
+              "us": "Fokus auf Kernwert"
+            },
+            {
+              "them": "Langsame Entwicklung",
+              "us": "Schnelle Iteration"
+            },
+            {
+              "them": "Hohe Anfangskosten",
+              "us": "Kosteneffizient"
+            }
+          ]
+        },
+        "roadmap": {
+          "steps": [
+            {
+              "title": "Konzeptvalidierung",
+              "description": "Verfeinerung Ihrer Idee in eine schlanke technische Spezifikation, die auf Wert fokussiert ist."
+            },
+            {
+              "title": "Rapid Prototyping",
+              "description": "Bau eines funktionalen Prototyps zum Testen von Benutzerflüssen und initialem Feedback."
+            },
+            {
+              "title": "MVP-Entwicklung",
+              "description": "Agile Entwicklung des produktionsreifen MVP unter Verwendung von Cloud-Native-Technologie."
+            },
+            {
+              "title": "Launch und Iteration",
+              "description": "Bereitstellung in der Produktion und Einrichtung von Analysen zur Messung des Verhaltens."
+            }
+          ]
+        },
+        "deliverables": [
+          "Voll funktionsfähiges MVP",
+          "Skalierbare Cloud-Architektur",
+          "Mobile-Responsive UI",
+          "Admin-Dashboard",
+          "Analytics-Integration"
+        ],
+        "guarantee": "Wir liefern ein funktionales MVP innerhalb der vereinbarten Zeit und des Budgets. Wenn wir scheitern, arbeiten wir kostenlos, bis es live ist.",
+        "faq": [
+          {
+            "question": "Welchen Tech-Stack verwenden Sie?",
+            "answer": "Wir wählen das beste Tool, typischerweise moderne Stacks wie React, Node.js und Supabase für schnelle Entwicklung und Skalierbarkeit."
+          },
+          {
+            "question": "Kann ich das später skalieren?",
+            "answer": "Ja. Wir bauen mit Skalierung im Hinterkopf, unter Verwendung von modularem Code und Cloud-Infrastruktur, die mit Ihrer Benutzerbasis wächst."
+          }
+        ]
+      }
+    },
+    "web": {
+      "enterprise": {
+        "hero": {
+          "title": "Gepanzerte Unternehmensidentität",
+          "subtitle": "Dominante Markenpräsenz auf globaler Ebene",
+          "description": "Wir bauen Webplattformen auf Unternehmensniveau, die Markenautorität gebieten und weltweit ultraschnelle Erlebnisse liefern. Unter Verwendung fortschrittlicher Designsysteme und Edge-Network-CDNs.",
+          "cta": "Marke stärken",
+          "gradient": "from-purple-500 to-pink-500"
+        },
+        "diagnosis": {
+          "title": "Ist Ihre digitale Präsenz fragmentiert?",
+          "problems": [
+            "Inkonsistente Markendarstellung auf regionalen Websites.",
+            "Langsame Ladezeiten schaden SEO und Benutzerbindung.",
+            "Schwierigkeiten bei der Verwaltung globaler Inhaltsaktualisierungen.",
+            "Mangelnde Einhaltung der Barrierefreiheit (WCAG) birgt rechtliches Risiko."
+          ],
+          "painPoint": "Langsame Seiten schaden der Marke",
+          "solution": "Globale Designsysteme",
+          "comparison": [
+            {
+              "them": "Inkonsistente UI",
+              "us": "Pixel-Perfect Konsistenz"
+            },
+            {
+              "them": "Langsame Performance",
+              "us": "Edge-Network Geschwindigkeit"
+            },
+            {
+              "them": "Schwer zu verwalten",
+              "us": "Headless CMS"
+            }
+          ]
+        },
+        "roadmap": {
+          "steps": [
+            {
+              "title": "Globales Audit",
+              "description": "Überprüfung des aktuellen Web-Status, der Leistungskennzahlen und der Markenkonsistenz."
+            },
+            {
+              "title": "Erstellung des Designsystems",
+              "description": "Entwicklung einer einheitlichen Komponentenbibliothek zur Gewährleistung der Markenintegrität."
+            },
+            {
+              "title": "Plattform-Engineering",
+              "description": "Aufbau einer Headless-CMS-Architektur mit globaler CDN-Verteilung."
+            },
+            {
+              "title": "Rollout und Schulung",
+              "description": "Phasenweiser Start regionaler Websites und Schulung für Content-Teams."
+            }
+          ]
+        },
+        "deliverables": [
+          "Globales Designsystem",
+          "Headless CMS Integration",
+          "Globale CDN-Konfiguration",
+          "WCAG 2.1 AA Compliance",
+          "Erweitertes Analytics-Dashboard"
+        ],
+        "guarantee": "Wir garantieren einen Google Lighthouse Score von 90+ und volle WCAG-Konformität, um sicherzustellen, dass Ihre Marke den Markt anführt.",
+        "faq": [
+          {
+            "question": "Wie gehen Sie mit mehrsprachigem Support um?",
+            "answer": "Wir implementieren robuste Internationalisierungs-Frameworks (i18n), die tief in das CMS integriert sind."
+          },
+          {
+            "question": "Wird es sich in unser CRM integrieren?",
+            "answer": "Ja, wir bauen maßgeschneiderte Konnektoren, um Benutzer- und Lead-Daten direkt mit Salesforce, HubSpot usw. zu synchronisieren."
+          }
+        ]
+      },
+      "personal": {
+        "hero": {
+          "title": "Ihr Portfolio, Ihr Vermächtnis",
+          "subtitle": "Visuelle Identität, die Aufmerksamkeit erregt",
+          "description": "Heben Sie sich in einem gesättigten Markt mit einer atemberaubenden, leistungsstarken Portfolio-Website ab. Wir konzentrieren uns auf visuelle Wirkung und Storytelling, um Ihre persönliche Marke zu stärken.",
+          "cta": "Meine Marke aufbauen",
+          "gradient": "from-purple-500 to-pink-500"
+        },
+        "diagnosis": {
+          "title": "Sind Sie online unsichtbar?",
+          "problems": [
+            "Generische Vorlagen, die niemanden beeindrucken.",
+            "Portfolio zeigt Ihre beste Arbeit nicht effektiv.",
+            "Niedrige Besucherkonversionsraten.",
+            "Schwierigkeiten, Inhalte ohne technische Hilfe zu aktualisieren."
+          ],
+          "painPoint": "Unsichtbar sein",
+          "solution": "Sofortige visuelle Wirkung",
+          "comparison": [
+            {
+              "them": "Generische Vorlagen",
+              "us": "Maßgeschneidertes Design"
+            },
+            {
+              "them": "Statischer Inhalt",
+              "us": "Dynamisches Storytelling"
+            },
+            {
+              "them": "Geringe Wirkung",
+              "us": "Hohe Konversion"
+            }
+          ]
+        },
+        "roadmap": {
+          "steps": [
+            {
+              "title": "Markenentdeckung",
+              "description": "Definition Ihres einzigartigen Wertversprechens und Ihrer visuellen Identität."
+            },
+            {
+              "title": "Visuelles Design",
+              "description": "Erstellung von High-Fidelity-Mockups, die Ihre Persönlichkeit und Professionalität einfangen."
+            },
+            {
+              "title": "Entwicklung",
+              "description": "Codierung einer pixelgenauen, responsiven Website mit flüssigen Animationen."
+            },
+            {
+              "title": "Inhaltsstrategie",
+              "description": "Optimierung Ihrer Texte und Fallstudien für maximale Wirkung."
+            }
+          ]
+        },
+        "deliverables": [
+          "Benutzerdefinierte Portfolio-Website",
+          "Visuelles Identitäts-Kit",
+          "CMS für einfache Updates",
+          "SEO-Optimierung",
+          "Social Media Integration"
+        ],
+        "guarantee": "Sie werden Ihre neue Website lieben. Wir bieten unbegrenzte Design-Revisionen an, bis Sie zu 100% zufrieden sind.",
+        "faq": [
+          {
+            "question": "Muss ich programmieren können?",
+            "answer": "Überhaupt nicht. Wir stellen ein einfach zu bedienendes CMS zur Verfügung, damit Sie Texte und Bilder aktualisieren können, wann immer Sie wollen."
+          },
+          {
+            "question": "Wie lange dauert es?",
+            "answer": "Typischerweise starten wir eine persönliche Website mit hoher Wirkung in 2-4 Wochen."
+          }
+        ]
+      }
+    },
+    "agent": {
+      "enterprise": {
+        "hero": {
+          "title": "Produktivitätsrevolution",
+          "subtitle": "Automatisierung von Operationen für massiven ROI",
+          "description": "Setzen Sie intelligente KI-Agenten ein, die rund um die Uhr arbeiten, um Arbeitsabläufe zu optimieren, Big Data zu analysieren und die Effizienz zu steigern. Sichere, private Lösungen, die sich in Ihren Stack integrieren.",
+          "cta": "Unternehmen automatisieren",
+          "gradient": "from-emerald-500 to-green-500"
+        },
+        "diagnosis": {
+          "title": "Ertrinken Sie in operativer Ineffizienz?",
+          "problems": [
+            "Hohe Betriebskosten durch repetitive manuelle Aufgaben.",
+            "Langsame Reaktionszeiten beeinträchtigen die Kundenzufriedenheit.",
+            "Unfähigkeit, Erkenntnisse aus großen Datenmengen zu gewinnen.",
+            "Risiken menschlicher Fehler in kritischen Arbeitsabläufen."
+          ],
+          "painPoint": "Hohe Betriebskosten",
+          "solution": "Autonome Belegschaft 24/7",
+          "comparison": [
+            {
+              "them": "Manuelle Arbeit",
+              "us": "KI-Belegschaft"
+            },
+            {
+              "them": "Reaktiver Support",
+              "us": "Proaktive Agenten"
+            },
+            {
+              "them": "Datensilos",
+              "us": "Umsetzbare Erkenntnisse"
+            }
+          ]
+        },
+        "roadmap": {
+          "steps": [
+            {
+              "title": "Workflow-Analyse",
+              "description": "Identifizierung von Zielen mit hohem Wert für die Automatisierung in Ihren Operationen."
+            },
+            {
+              "title": "Agenten-Architektur",
+              "description": "Design sicherer KI-Agenten, die auf spezifische Geschäftsfunktionen zugeschnitten sind."
+            },
+            {
+              "title": "Integration und Training",
+              "description": "Verbindung von Agenten mit Ihren Data Lakes und APIs sowie Feinabstimmung von Modellen."
+            },
+            {
+              "title": "Bereitstellung und Überwachung",
+              "description": "Rollout von Agenten mit umfassender Aufsicht und Leistungsverfolgung."
+            }
+          ]
+        },
+        "deliverables": [
+          "Benutzerdefinierte KI-Agenten-Suite",
+          "Private LLM-Bereitstellung",
+          "Echtzeit-Analytics-Dashboard",
+          "Operationale Uptime 24/7",
+          "ROI-Auswirkungsbericht"
+        ],
+        "guarantee": "Wir garantieren eine Mindestreduzierung der Bearbeitungszeit für automatisierte Workflows um 30% im ersten Quartal.",
+        "faq": [
+          {
+            "question": "Sind unsere Daten sicher?",
+            "answer": "Ja. Wir stellen private Instanzen von KI-Modellen innerhalb Ihrer sicheren Infrastruktur bereit."
+          },
+          {
+            "question": "Können Agenten komplexe Entscheidungen treffen?",
+            "answer": "Unsere Agenten verfügen über 'Human-in-the-Loop'-Protokolle, um an menschliche Experten zu eskalieren, wenn das Vertrauen gering ist."
+          }
+        ]
+      },
+      "personal": {
+        "hero": {
+          "title": "Gewinnen Sie Ihre Zeit zurück",
+          "subtitle": "Ihr persönlicher digitaler Butler",
+          "description": "Stellen Sie sich ein Leben vor, in dem sich alltägliche Aufgaben von selbst erledigen. Unsere persönlichen Agenten verwalten Termine, E-Mails und Recherchen und geben Ihnen Ihre Freiheit zurück.",
+          "cta": "Assistenten holen",
+          "gradient": "from-emerald-500 to-green-500"
+        },
+        "diagnosis": {
+          "title": "Fühlen Sie sich überwältigt?",
+          "problems": [
+            "Ständiger Kontextwechsel tötet Ihre Produktivität.",
+            "Posteingang immer überfüllt.",
+            "Wichtige Termine oder Fristen verpasst.",
+            "Null Zeit für persönliches Wachstum oder Entspannung."
+          ],
+          "painPoint": "Burnout durch repetitive Aufgaben",
+          "solution": "Persönlicher digitaler Assistent",
+          "comparison": [
+            {
+              "them": "Desorganisiertes Chaos",
+              "us": "Automatisierte Ordnung"
+            },
+            {
+              "them": "Verpasste Chancen",
+              "us": "Perfektes Timing"
+            },
+            {
+              "them": "Burnout",
+              "us": "Seelenfrieden"
+            }
+          ]
+        },
+        "roadmap": {
+          "steps": [
+            {
+              "title": "Lebensstil-Bewertung",
+              "description": "Verständnis Ihrer täglichen Reibungspunkte und Automatisierungsbedürfnisse."
+            },
+            {
+              "title": "Agenten-Konfiguration",
+              "description": "Einrichtung Ihrer persönlichen KI mit Zugriff auf Ihren Kalender und Ihre Tools."
+            },
+            {
+              "title": "Automatisierungs-Setup",
+              "description": "Erstellung von Workflows für E-Mail-Filterung, Terminplanung und Informationsbeschaffung."
+            },
+            {
+              "title": "Onboarding",
+              "description": "Ihnen beibringen, wie Sie effektiv mit Ihrem neuen digitalen Assistenten interagieren."
+            }
+          ]
+        },
+        "deliverables": [
+          "Personalisierter KI-Assistent",
+          "E-Mail- und Kalender-Integration",
+          "Auto-Recherche-Tools",
+          "Tägliches Briefing-System",
+          "Mobile Zugriffs-App"
+        ],
+        "guarantee": "Wenn Sie im ersten Monat nicht mindestens 10 Stunden pro Woche sparen, erstatten wir die Einrichtungsgebühr.",
+        "faq": [
+          {
+            "question": "Ist es schwer einzurichten?",
+            "answer": "Nein, wir kümmern uns um die gesamte technische Konfiguration. Sie verbinden einfach Ihre Konten und fangen an zu chatten."
+          },
+          {
+            "question": "Was ist mit meiner Privatsphäre?",
+            "answer": "Ihr persönlicher Agent ist mit strengen Datenschutzkontrollen konfiguriert. Wir verkaufen oder teilen Ihre Daten nicht."
+          }
+        ]
+      }
+    }
   }
 }

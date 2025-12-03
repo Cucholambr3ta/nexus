@@ -27,5 +27,5 @@ export default async function ServicePage({ params }: ServicePageProps) {
   const serviceMode = slug as ServiceMode;
   const data = SERVICES_DATA[serviceMode];
 
-  return <ServiceContent mode={serviceMode} data={data} />;
+  return <ServiceContent mode={serviceMode} image={data.image} />;
 }
